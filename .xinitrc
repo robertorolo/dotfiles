@@ -4,6 +4,10 @@
 export PATH="$HOME/.local/bin:$PATH"
 
 #setting wallpaper
-xwallpaper --zoom ~/.local/wallpaper
+xwallpaper --zoom ~/.local/wallpaper.png
 
+#load xrdb
+xrdb ~/.Xresources
+
+#start WM
 exec dwm
