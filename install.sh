@@ -4,7 +4,7 @@ echo Installing packages
 sudo pacman -S $(cat progs)
 
 echo copying dotfiles to home directory
-cp .xinitrc ~
+cp .xinitrc .bashrc ~
 cp -rp .local .config ~
 
 echo giving permissions
