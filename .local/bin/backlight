@@ -1,0 +1,8 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+    3) notify-send "Do not waste your battery!" ;;
+esac
+
+bl="$(xbacklight -get | awk  '{printf "%.0f\n", $1}')"
+echo 💡 "$bl"%

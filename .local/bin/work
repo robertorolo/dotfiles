@@ -1,0 +1,3 @@
+#!/bin/bash
+
+chromium --new-window https://expresso.rs.gov.br/expressoMail/index.php www.siout.rs.gov.br docs.google.com/spreadsheets/d/15eZB6CqS9zVtPMoZseA24MgT5h1DlcZWZWOecroATtQ/edit#gid=0 &
