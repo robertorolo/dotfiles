@@ -7,3 +7,11 @@
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
+
+#auto start X
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
+
+#adding scripts folder to PATH
+export PATH="$HOME/.local/bin:$PATH"
