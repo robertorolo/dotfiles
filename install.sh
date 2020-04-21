@@ -11,12 +11,17 @@ echo Installing packages
 sudo pacman -S $(cat progs)
 
 echo Compiling suckless software
-cd .local/src/dwm
-sudo make clean Install
-cd ..
-cd st 
+mkdir .local/src
+cd .local/src
+git clone git://git.suckless.org/dwm
+cd dwm
 sudo make clean install
 cd ..
+git clone git://git.suckless.org/dwm
+cd st
+sudo make clean install
+cd ..
+git clone git://git.suckless.org/dmenu
 cd dmenu
 sudo make clean install
 
