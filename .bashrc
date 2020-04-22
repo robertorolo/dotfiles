@@ -17,5 +17,5 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 
 #setting more enviroment variables
-export BROWSER=/bin/chromium
-export EDITOR=/bin/vim
+export BROWSER=/usr/bin/chromium
+export EDITOR=/usr/bin/vim
