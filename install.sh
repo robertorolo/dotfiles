@@ -26,7 +26,7 @@ git clone https://github.com/robertorolo/dwm.git
 cd dwm
 sudo make clean install
 cd ..
-git clone git://git.suckless.org/st
+git clone https://github.com/robertorolo/st.git
 cd st
 sudo make clean install
 cd ..
