@@ -20,8 +20,15 @@ runtime! archlinux.vim
 " adding my configs
 :set number
 :set mouse=r
-:set clipboard=unnamed
+:set clipboard=unnamedplus
 :set laststatus=2
+
+" Windows keymapings
+" CTRL-C and CTRL-Insert are Copy
+vnoremap <C-y> "+y
+" CTRL-V and SHIFT-Insert are Paste
+map <C-p>       "+gP
+
 
 " now this is configurations for plugins
 
@@ -37,6 +44,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
+
+Plug 'gko/vim-coloresque'
 
 " Initialize plugin system
 call plug#end()
