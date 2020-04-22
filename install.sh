@@ -5,7 +5,7 @@ cp .xinitrc .bashrc .Xresources .vimrc ~
 cp -rp .local .config ~
 
 echo giving permissions
-sudo chmod +x ~/.xinitrc ~/.local/bin/*
+sudo chmod +x ~/.xinitrc ~/.bashrc ~/.local/bin/*
 
 echo Installing packages
 sudo pacman -S $(cat progs)
