@@ -34,4 +34,11 @@ git clone git://git.suckless.org/dmenu
 cd dmenu
 sudo make clean install
 
+echo Enabling services
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+
+sudo systemctl enable tlp.service
+sudo systemctl start tlp.service
+
 echo We are ready to go
