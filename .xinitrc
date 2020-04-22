@@ -15,6 +15,7 @@ xinput set-prop 11 309 1
 
 #starting programs
 dropbox &
+compton &
 
 #start WM
 exec dwm
