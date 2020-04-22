@@ -157,9 +157,9 @@
 
 #define S_base03 #002b36
 
-/*dwm.normbgcolor: #282A36 /*
-/*dwm.normfgcolor: #F8F8F2 /*
-/*dwm.normbordercolor: #000000 /*
-/*dwm.selbgcolor: #4D4D4D /*
-/*dwm.selfgcolor: #FF5555 /*
-/*dwm.selbordercolor: #FF6E67 /*
+/* dwm.normbgcolor: #282A36 /*
+/* dwm.normfgcolor: #F8F8F2 /*
+/* dwm.normbordercolor: #000000 /*
+/* dwm.selbgcolor: #4D4D4D /*
+/* dwm.selfgcolor: #FF5555 /*
+/* dwm.selbordercolor: #FF6E67 /*
