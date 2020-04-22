@@ -15,3 +15,7 @@ fi
 
 #adding scripts folder to PATH
 export PATH="$HOME/.local/bin:$PATH"
+
+#setting more enviroment variables
+export BROWSER=/bin/chromium
+export EDITOR=/bin/vim
