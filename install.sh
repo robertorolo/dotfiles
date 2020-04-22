@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo copying dotfiles to home directory
-cp .xinitrc .bashrc .Xresources .vimrc ~
+cp .xinitrc .bashrc .Xresources .vimrc .gitconfig ~
 cp -rp .local .config ~
 
 echo giving permissions
