@@ -10,9 +10,18 @@ sudo chmod +x ~/.xinitrc ~/.local/bin/*
 echo Installing packages
 sudo pacman -S $(cat progs)
 
-echo Compiling suckless software
+echo Installing yay
 mkdir .local/src
 cd .local/src
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+echo Installing yay packages
+yay -S $(cat progs_aur)
+
+echo Compiling suckless software
+cd ..
 git clone git://git.suckless.org/dwm
 cd dwm
 sudo make clean install
