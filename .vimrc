@@ -20,6 +20,7 @@ runtime! archlinux.vim
 " adding my configs
 :set number
 :set mouse=r
+:set clipboard=unnamed
 :set laststatus=2
 
 " now this is configurations for plugins
