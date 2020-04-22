@@ -15,6 +15,9 @@ export PATH="$HOME/.local/bin:$PATH"
 export BROWSER=/usr/bin/chromium
 export EDITOR=/usr/bin/vim
 
+#quick fix for make delete key work on st
+tput smkx
+
 #auto start X
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
