@@ -11,8 +11,8 @@ echo Installing packages
 sudo pacman -S $(cat progs)
 
 echo Installing yay
-mkdir .local/src
-cd .local/src
+mkdir ~/.local/src
+cd ~/.local/src
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -22,11 +22,11 @@ yay -S $(cat progs_aur)
 
 echo Compiling suckless software
 cd ..
-git clone git://git.suckless.org/dwm
+git clone https://github.com/robertorolo/dwm.git
 cd dwm
 sudo make clean install
 cd ..
-git clone git://git.suckless.org/dwm
+git clone git://git.suckless.org/st
 cd st
 sudo make clean install
 cd ..
