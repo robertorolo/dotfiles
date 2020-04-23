@@ -19,8 +19,10 @@ runtime! archlinux.vim
 
 " adding my configs
 :set number
-:set mouse=r
-:set clipboard=unnamedplus
+:set mouse=a
+:set clipboard+=unnamed  " use the clipboards of vim and win
+:set paste               " Paste from a windows or from vim
+:set go+=a               " Visual selection automatically copied to the clipboard
 :set laststatus=2
 
 " now this is configurations for plugins
