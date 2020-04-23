@@ -18,7 +18,7 @@ cd yay
 makepkg -si
 
 echo Installing yay packages
-yay -S $(cat progs_aur)
+yay -S $(cat ~/dotfiles/progs_aur)
 
 echo Compiling suckless software
 cd ..
