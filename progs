@@ -1,1 +1,1 @@
- xf86-video-intel xorg-server xorg-xinit xorg-xsetroot xorg-xinput xorg-xbacklight pulseaudio-alsa pulsemixer pamixer pulseaudio-bluetooth bluez bluez-utils chromium base-devel fontconfig libx11 libxft libxinerama xwallpaper xcompmgr sxiv tlp xclip maim zathura mpv dunst
+ xf86-video-intel xorg-server xorg-xinit xorg-xsetroot xorg-xinput xorg-xbacklight pulseaudio-alsa pulsemixer pamixer pulseaudio-bluetooth bluez bluez-utils chromium base-devel fontconfig libx11 libxft libxinerama xwallpaper xcompmgr sxiv tlp xclip maim zathura mpv dunst libnotify
