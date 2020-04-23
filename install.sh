@@ -4,6 +4,9 @@ echo copying dotfiles to home directory
 cp .xinitrc .bashrc .Xresources .vimrc .gitconfig ~
 cp -rp .local .config ~
 
+echo copying other config files
+sudo cp 20-intel.conf /etc/X11/xorg.conf.d
+
 echo giving permissions
 sudo chmod +x ~/.xinitrc ~/.bashrc ~/.local/bin/* ~/.config/sxiv/exec/key-handler
 
