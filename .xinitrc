@@ -20,6 +20,7 @@ setxkbmap -layout gb -variant intl
 dropbox &
 xcompmgr &
 statusbar &
+dunst &
 
 #start WM
 exec dwm

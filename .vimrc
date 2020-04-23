@@ -19,9 +19,10 @@ runtime! archlinux.vim
 
 " adding my configs
 :set number
-:set mouse=r
-:set clipboard=unnamedplus
+:set mouse=a
 :set laststatus=2
+:vnoremap <C-c> "+y
+:map <C-p> "+p
 
 " now this is configurations for plugins
 
