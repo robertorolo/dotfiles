@@ -155,10 +155,8 @@
 /* *.color256: 0#1d2021 */
 /* *.color257: 15#ebdbb2 */
 
-#define S_base03 #002b36
-
 dwm.normbgcolor: #1f1f1f 
-dwm.normfgcolor: #2a84d2
+dwm.normfgcolor: #d6dbe5
 dwm.normbordercolor: #5350b9
 dwm.selbgcolor: #2a84d2
 dwm.selfgcolor: #d6dbe5
