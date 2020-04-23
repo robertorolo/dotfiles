@@ -40,6 +40,7 @@ sudo make clean install
 echo Enabling services
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
+sudo echo "AutoEnable=true" >> /etc/bluetooth/main.conf
 
 sudo systemctl enable tlp.service
 sudo systemctl start tlp.service
