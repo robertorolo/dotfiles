@@ -29,7 +29,7 @@ git clone https://github.com/robertorolo/dwm.git
 cd dwm
 sudo make clean install
 cd ..
-git clone https://github.com/robertorolo/st.git
+git clone https://github.com/LukeSmithxyz/st.git
 cd st
 sudo make clean install
 cd ..
