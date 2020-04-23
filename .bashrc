@@ -14,6 +14,7 @@ export PATH="$HOME/.local/bin:$PATH"
 #setting more enviroment variables
 export BROWSER=/usr/bin/chromium
 export EDITOR=/usr/bin/vim
+export LC_ALL="pt_BR.UTF-8"
 
 #quick fix for make delete key work on st
 tput smkx
