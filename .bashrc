@@ -6,13 +6,16 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+PS1='λ \W \$ '
+#PS1='[\u@\h \W]\$ '
 
 #adding scripts folder to PATH
 export PATH="$HOME/.local/bin:$PATH"
 
 #setting more enviroment variables
 export BROWSER=/usr/bin/chromium
+export READER="zathura"
+export TERMINAL="st"
 export EDITOR=/usr/bin/vim
 export LC_ALL="pt_BR.UTF-8"
 

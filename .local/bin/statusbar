@@ -21,7 +21,17 @@ wifi="$(iw dev | grep ssid | awk '{print $2}')"
 echo -e " $wifi"
 }
 
+i=0
+
 while true; do
-	xsetroot -name " $(battery) | $(wifi) | $(vol) | $(bl) | $(dte)" 
+
+	if [ "$i" -eq "0" ] || [ "$i" -eq "900" ]; then
+        	ibov_val=" $(ibov)"
+		i=1
+	fi
+
+	xsetroot -name " $ibov_val | $(battery) | $(wifi) | $(vol) | $(bl) | $(dte)" 
+      
+       	i=$(($i + 1))
 	sleep 1
 done
