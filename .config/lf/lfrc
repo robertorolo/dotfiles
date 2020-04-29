@@ -1,6 +1,6 @@
 # Basic vars
 set preview true
-set previewr ~/.local/bin
+set preview ~/.local/bin/preview
 set color256
 set hidden
 set drawbox true
