@@ -8,4 +8,4 @@ def get_ibov():
     round_val = (val/1000).round(2)
     return 'IBOV '+str(round_val)+'K'
 
-print("💸 "+get_ibov())
+print(get_ibov())
