@@ -3,7 +3,7 @@
 echo "Installing programs..."
 sleep 1
 
-apt-get install xinit openbox obconf obmenu lxterminal leafpad firefox pcmanfm tint2 nitrogen
+apt-get install xinit openbox obconf obmenu lxterminal leafpad firefox pcmanfm tint2 nitrogen lxappearance
 
 path=$(pwd)
 
