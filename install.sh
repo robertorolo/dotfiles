@@ -3,7 +3,7 @@
 echo "Installing programs..."
 sleep 1
 
-apt-get install xinit openbox obconf obmenu lxterminal leafpad firefox pcmanfm tint2 nitrogen lxappearance picom rofi
+apt-get install xinit openbox obconf obmenu lxterminal leafpad firefox pcmanfm tint2 nitrogen lxappearance compton rofi
 
 path=$(pwd)
 
