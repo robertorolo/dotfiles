@@ -37,3 +37,8 @@ exec openbox-session
 # exec notion
 # exec startdde       
 # deepin-session
+
+tint2 &
+compton &
+nitrogen --restore &
+rofi -show run &
