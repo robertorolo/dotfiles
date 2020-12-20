@@ -1,3 +1,0 @@
-#!/bin/sh
-
-bluetoothctl connect 00:16:94:3D:11:93

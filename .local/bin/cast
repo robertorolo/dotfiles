@@ -1,3 +1,0 @@
-#!/bin/bash
-
-chromium --app=https://play.pocketcasts.com/new-releases --new-window
