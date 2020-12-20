@@ -18,3 +18,4 @@ ln -sf $path/.xinitrc $HOME/.xinitrc
 # openbox
 [ ! -d $HOME/.config/openbox ] && mkdir $HOME/.config/openbox
 ln -sf $path/autostart $HOME/.config/openbox/autostart
+ln -sf $path/rc.xml $HOME/.config/openbox/rc.xml
