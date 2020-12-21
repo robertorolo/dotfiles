@@ -3,11 +3,7 @@
 echo "Installing programs..."
 sleep 1
 
-apt-get install xinit openbox obconf obmenu lxterminal leafpad firefox pcmanfm tint2 nitrogen lxappearance compton rofi arc-theme 
-
-git clone https://github.com/horst3180/arc-icon-theme --depth 1 && cd arc-icon-theme
-./autogen.sh --prefix=/usr
-sudo make install
+pacman -S xinit openbox obconf obmenu lxterminal leafpad firefox pcmanfm tint2 nitrogen lxappearance compton rofi 
 
 echo "copying dotfiles..."
 sleep 1
