@@ -19,6 +19,7 @@ ln -sf $path/.xinitrc $HOME/.xinitrc
 [ ! -d $HOME/.config/openbox ] && mkdir $HOME/.config/openbox
 ln -sf $path/autostart $HOME/.config/openbox/autostart
 ln -sf $path/rc.xml $HOME/.config/openbox/rc.xml
+ln -sf $path/menu.xml $HOME/.config/openbox/menu.xml
 
 # tint2
 [ ! -d $HOME/.config/tint2 ] && mkdir $HOME/.config/tint2
