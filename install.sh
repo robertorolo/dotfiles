@@ -3,7 +3,7 @@
 echo "Installing programs..."
 sleep 1
 
-pacman -S xorg-xinit qtile kitty nitrogen
+pacman -S xorg-server xorg-xinit qtile kitty nitrogen
 
 echo "copying dotfiles..."
 sleep 1
