@@ -3,7 +3,7 @@
 echo "Installing programs..."
 sleep 1
 
-pacman -S xinit qtile kitty nitrogen
+pacman -S xorg-init qtile kitty nitrogen
 
 pip3 install --user pywal
 
