@@ -25,7 +25,7 @@ fi
 # exec startplasma-wayland
 # exec startxfce4
 # exec startfluxbox
-exec openbox-session
+# exec openbox-session
 # exec cinnamon-session
 # exec pekwm
 # exec catwm
@@ -37,3 +37,4 @@ exec openbox-session
 # exec notion
 # exec startdde       
 # deepin-session
+exec qtile
