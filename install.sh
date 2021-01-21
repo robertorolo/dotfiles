@@ -5,7 +5,15 @@ while true; do
     case $input in
         [yY]*)
             echo 'Installing xfce'
-		        pacman -S xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter chromium network-manager-applet pulseaudio pavucontrol xf86-video-intel 
+		        pacman -S xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter chromium network-manager-applet pulseaudio pavucontrol xf86-video-intel
+
+				echo Installing yay
+				mkdir ~/.local/src
+				cd ~/.local/src
+				git clone https://aur.archlinux.org/yay.git
+				cd yay
+				makepkg -si
+				
 		        systemctl enable lightdm
             break
             ;;
