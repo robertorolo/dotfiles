@@ -36,6 +36,11 @@ select de in xfce gnome kde; do
         ;;
     kde)
         echo "Installing kde..."
+        sudo pacman -S xorg plasma-meta kde-applications 
+        
+        sudo systemctl enable sddm 
+        
+        yay -S ttf-jetbrains-mono
         break
         ;;
     *)
