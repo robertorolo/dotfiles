@@ -31,6 +31,7 @@ select de in xfce gnome kde; do
         
         sudo systemctl enable gdm
         
+        yay -S ttf-jetbrains-mono
         break
         ;;
     kde)
