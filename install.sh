@@ -27,6 +27,10 @@ select de in xfce gnome kde; do
         ;;
     gnome)
         echo "Installing gnome..."
+        sudo pacman -S gnome gnome-extra gdm
+        
+        sudo systemctl enable gdm
+        
         break
         ;;
     kde)
