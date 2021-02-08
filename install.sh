@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo 'Instaling yay...'
-echo Installing yay
 mkdir ~/.local
 mkdir ~/.local/src
 cd ~/.local/src
