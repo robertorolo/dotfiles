@@ -2,6 +2,7 @@
 
 echo 'Instaling yay...'
 echo Installing yay
+mkdir ~/.local
 mkdir ~/.local/src
 cd ~/.local/src
 git clone https://aur.archlinux.org/yay.git
