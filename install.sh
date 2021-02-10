@@ -50,9 +50,9 @@ select de in xfce gnome kde; do
 done
 
 echo "Installing some fancy fonts..."
-yay ttf-jetbrains-mono ttf-ms-fonts ttf-ubuntu-font-family ttf-iosevka nerd-fonts-sf-mono ttf-fira-code ttf-cascadia-code
+yay ttf-jetbrains-mono ttf-ms-fonts ttf-ubuntu-font-family ttf-iosevka nerd-fonts-sf-mono 
 
-sudo pacman -S noto-fonts-emoji 
+sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code
 
 echo "copying dotfiles..."
 cd ~
