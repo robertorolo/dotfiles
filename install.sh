@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo pacman -S base-devel
 echo 'Instaling yay...'
 mkdir ~/.local
 mkdir ~/.local/src
