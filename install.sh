@@ -22,7 +22,8 @@ select de in xfce gnome kde; do
         sudo systemctl enable lightdm
         sudo systemctl enable bluetooth
 
-        yay -S qogir-gtk-theme qogir-icon-theme ttf-jetbrains-mono ttf-ms-fonts ttf-ubuntu-font-family nord-xfce-terminal 
+        yay -S qogir-gtk-theme qogir-icon-theme nord-xfce-terminal 
+        
         break
         ;;
     gnome)
@@ -31,7 +32,6 @@ select de in xfce gnome kde; do
         
         sudo systemctl enable gdm
         
-        yay -S ttf-jetbrains-mono
         break
         ;;
     kde)
@@ -39,8 +39,7 @@ select de in xfce gnome kde; do
         sudo pacman -S xorg plasma-meta kde-applications 
         
         sudo systemctl enable sddm 
-        
-        yay -S ttf-jetbrains-mono
+    
         break
         ;;
     *)
@@ -49,6 +48,11 @@ select de in xfce gnome kde; do
     esac
 
 done
+
+echo "Installing some fancy fonts..."
+yay ttf-jetbrains-mono ttf-ms-fonts ttf-ubuntu-font-family ttf-iosevka nerd-fonts-sf-mono ttf-fira-code ttf-cascadia-code
+
+sudo pacman -S noto-fonts-emoji 
 
 echo "copying dotfiles..."
 cd ~
