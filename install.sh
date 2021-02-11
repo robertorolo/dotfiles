@@ -43,28 +43,28 @@ select de in xfce gnome kde i3; do
     
         break
         ;;
-	i3)
-		echo "Installing i3..."
+    i3)
+	echo "Installing i3..."
 
-		sudo pacman -S xorg-server xorg-init i3-gaps i3-status rxvt-unicode dmenu qutebrowser ranger
+	sudo pacman -S xorg-server xorg-init i3-gaps i3-status rxvt-unicode dmenu qutebrowser ranger
 
-		echo "copying dotfiles..."
-		cd ~
-		sleep 1
+	echo "copying dotfiles..."
+	cd ~
+	sleep 1
 
-		path=$(pwd)
+	path=$(pwd)
 
-		ln -sf $path/.xinitrc $HOME/.xinitrc
+	ln -sf $path/.xinitrc $HOME/.xinitrc
 
-		#Config directory
-		#[ ! -d $HOME/.config ] && mkdir $HOME/.config
-		
-		#fonts
-		#[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
-		#ln -sf $path/.fonts.conf $HOME/.config/fontconfig/fonts.conf
+	#Config directory
+	#[ ! -d $HOME/.config ] && mkdir $HOME/.config
 
-		break
-		;;
+	#fonts
+	#[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
+	#ln -sf $path/.fonts.conf $HOME/.config/fontconfig/fonts.conf
+
+	break
+	;;
     *)
         echo "Invalid entry."
         ;;
