@@ -45,9 +45,9 @@ select de in xfce gnome kde i3; do
         ;;
 	i3)
 		echo "Installing i3..."
-		
-		sudo pacman -S 
-		
+
+		sudo pacman -S xorg-server xorg-init i3-gaps i3-status rxvt-unicode dmenu qutebrowser ranger
+
 		echo "copying dotfiles..."
 		cd ~
 		sleep 1
@@ -59,6 +59,10 @@ select de in xfce gnome kde i3; do
 		#Config directory
 		#[ ! -d $HOME/.config ] && mkdir $HOME/.config
 		
+		#fonts
+		#[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
+		#ln -sf $path/.fonts.conf $HOME/.config/fontconfig/fonts.conf
+
 		break
 		;;
     *)
