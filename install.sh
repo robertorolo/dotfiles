@@ -72,7 +72,7 @@ select de in xfce gnome kde i3; do
 
 done
 
-echo "Installing some fancy fonts..."
-yay -S ttf-jetbrains-mono ttf-ms-fonts ttf-ubuntu-font-family ttf-iosevka nerd-fonts-sf-mono 
+#echo "Installing some fancy fonts..."
+#yay -S ttf-jetbrains-mono ttf-ms-fonts ttf-ubuntu-font-family ttf-iosevka nerd-fonts-sf-mono 
 
-sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code
+sudo pacman -S noto-fonts ttf-fira-code ttf-cascadia-code
