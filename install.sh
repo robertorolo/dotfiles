@@ -12,7 +12,7 @@ makepkg -si
 echo "Which DE you want to install?"
 
 # Operating system names are used here as a data source
-select de in xfce gnome kde; do
+select de in xfce gnome kde i3; do
 
     case $de in
     xfe)
@@ -43,6 +43,24 @@ select de in xfce gnome kde; do
     
         break
         ;;
+	i3)
+		echo "Installing i3..."
+		
+		sudo pacman -S 
+		
+		echo "copying dotfiles..."
+		cd ~
+		sleep 1
+
+		path=$(pwd)
+
+		ln -sf $path/.xinitrc $HOME/.xinitrc
+
+		#Config directory
+		#[ ! -d $HOME/.config ] && mkdir $HOME/.config
+		
+		break
+		;;
     *)
         echo "Invalid entry."
         ;;
@@ -54,14 +72,3 @@ echo "Installing some fancy fonts..."
 yay -S ttf-jetbrains-mono ttf-ms-fonts ttf-ubuntu-font-family ttf-iosevka nerd-fonts-sf-mono 
 
 sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code
-
-echo "copying dotfiles..."
-cd ~
-sleep 1
-
-path=$(pwd)
-
-#ln -sf $path/.xinitrc $HOME/.xinitrc
-
-# Config directory
-#[ ! -d $HOME/.config ] && mkdir $HOME/.config
