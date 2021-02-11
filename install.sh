@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo pacman -Syuu
+
 sudo pacman -S base-devel
 echo 'Instaling yay...'
 mkdir ~/.local
