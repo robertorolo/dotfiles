@@ -56,14 +56,14 @@ select de in xfce gnome kde i3; do
 
 	path=$(pwd)
 
-	ln -sf $path/.xinitrc $HOME/.xinitrc
+	cp $path/.xinitrc $HOME/.xinitrc
 
 	#Config directory
-	#[ ! -d $HOME/.config ] && mkdir $HOME/.config
+	[ ! -d $HOME/.config ] && mkdir $HOME/.config
 
 	#fonts
 	#[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
-	#ln -sf $path/.fonts.conf $HOME/.config/fontconfig/fonts.conf
+	#cp $path/.fonts.conf $HOME/.config/fontconfig/fonts.conf
 
 	break
 	;;
