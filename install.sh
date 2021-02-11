@@ -46,7 +46,7 @@ select de in xfce gnome kde i3; do
     i3)
 	echo "Installing i3..."
 
-	sudo pacman -S xorg-server xorg-init i3-gaps i3-status rxvt-unicode dmenu qutebrowser ranger xf86-video-intel
+	sudo pacman -S  xorg xorg-xinit xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger 
 
 	echo "copying dotfiles..."
 	cd ~
