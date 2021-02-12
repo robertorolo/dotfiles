@@ -25,9 +25,8 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/mybar]
-modules-right = pulseaudio  date
-modules-center = xwindow
-modules-left = i3 
+modules-right = filesystem wlan1 wlan2 battery cpu memory temperature xbacklight pulseaudio date
+modules-left = i3 xwindow 
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -36,7 +35,7 @@ foreground = ${colors.foreground}
 font-0 = sans:size=10;2
 font-1 = FontAwesome:size=10;2
 
-height = 25
+height = 20
 border-size = 1 
 padding-left = 0
 padding-right = 0
@@ -57,12 +56,12 @@ label = %date% %time%
 type = internal/i3
 fuzzy-match = false
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
+ws-icon-0 = 1;um
+ws-icon-1 = 2;dois
+ws-icon-2 = 3;três
+ws-icon-3 = 4;quatro
+ws-icon-4 = 5;cinco
+ws-icon-5 = 6;seis
 
 label-focused = %icon%
 label-focused-background = ${colors.primary}
@@ -103,30 +102,30 @@ label-muted = muted
 
 [module/xwindow]
 type = internal/xwindow
-label =  %title:0:100:...%
+label =  %title:0:100:...%
 label-foreground = ${colors.foreground}
 label-background = ${colors.primary}
 
 [module/filesystem]
 type = internal/fs
 interval = 25
-mount-0 = /home
-label-mounted =  ~/%percentage_used%%
+mount-0 = /
+label-mounted =   ~/%percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground}
 
 [module/xbacklight]
 type = internal/xbacklight
 format = <label>
-label = lg %percentage%%
+label =  %percentage%%
 
 [module/wlan1]
 type = internal/network
-interface = wlp58s0
+interface = wlp3s0
 interval = 1.0
-format-connected = wifi <ramp-signal>
+format-connected =  <ramp-signal>
 format-disconnected = <label-disconnected>
-label-disconnected = disc
+label-disconnected = 
 label-disconnected-foreground = ${colors.foreground-alt3}
 ramp-signal-0 = 0%
 ramp-signal-1 = 25%
@@ -137,9 +136,9 @@ ramp-signal-4 = 100%
 
 [module/wlan2]
 type = internal/network
-interface = wlp58s0
+interface = wlp3s0
 interval = 1.0
-format-connected = dl<label-connected>
+format-connected = <label-connected>
 label-connected =  %downspeed:3%
 
 [module/temperature]
@@ -161,9 +160,9 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 98
-format-charging = <animation-charging> <label-charging>
-format-discharging = bat <label-discharging>
-format-full = full <label-full>
+format-charging =  <animation-charging> <label-charging>
+format-discharging =  <label-discharging>
+format-full =  <label-full>
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = %percentage%%
@@ -178,21 +177,18 @@ animation-charging-2 = /
 animation-charging-3 = -
 animation-charging-framerate = 100
 
-[module/updates-arch-combined]
-type = custom/script
-exec = ~/.config/polybar/scripts/updates-arch-combined.sh
-interval = 600
 [module/cpu]
 type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 1
 format = <label>
-label = cpu %percentage%%
+label =  %percentage%%
+
 [module/memory]
 type = internal/memory
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 3
 format = <label>
-label = ram %gb_used%
+label =  %gb_used%

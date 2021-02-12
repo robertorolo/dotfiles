@@ -23,6 +23,6 @@ wal-tile() {
 # Alternative (blocks terminal for 0-3ms)
 cat ~/.cache/wal/sequences
 
-export PATH=$pwd/scripts:$PATH
+export PATH=~/dotfiles/scripts:$PATH
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi

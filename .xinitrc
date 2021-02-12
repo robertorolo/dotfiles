@@ -12,4 +12,6 @@ wal -R
 
 sleep 1s && dunst &
 
+teclado.sh
+
 exec i3
