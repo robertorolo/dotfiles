@@ -51,16 +51,17 @@ select de in xfce gnome kde i3; do
 	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils feh
 
 	echo "copying dotfiles..."
+	path=$(pwd)
 
-	cp .xinitrc $HOME
-	cp .Xresources $HOME
+	cp $path/.xinitrc $HOME
+	cp $path/.Xresources $HOME
 
 	#Config directory
 	[ ! -d $HOME/.config ] && mkdir $HOME/.config
 
 	#fonts
 	[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
-	cp fonts.conf $HOME/.config/fontconfig
+	cp $path/fonts.conf $HOME/.config/fontconfig
 
 	break
 	;;
