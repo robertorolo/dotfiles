@@ -7,7 +7,7 @@ URxvt.scrollBar: False
 URxvt*inheritPixmap: true
 URxvt*transparent: true
 ! URxvt*shading: 0 to 99 darkens, 101 to 200 lightens
-URxvt*shading: 85
+URxvt*shading: 60
 
 !Manospace
 URxvt.font: xft:Monospace-10
