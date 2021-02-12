@@ -7,3 +7,18 @@
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
+
+# You can create a function for this in your shellrc (.bashrc, .zshrc).
+wal-tile() {
+    wal -n -i "$@"
+    feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
+}
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# Not supported in the "fish" shell.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+cat ~/.cache/wal/sequences
