@@ -51,7 +51,7 @@ select de in xfce gnome kde i3; do
     i3)
 	echo "Installing i3 and some basic progrmas..."
 
-	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot
+	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m
 	
 	yay -S polybar
 	
@@ -82,7 +82,12 @@ select de in xfce gnome kde i3; do
 	#dunst
 	[ ! -d $HOME/.config/dunst ] && mkdir $HOME/.config/dunst
 	ln -sf $path/config/dunst/dunstrc $HOME/.config/dunst/dunstrc
+
+	#ranger
+	[ ! -d $HOME/.config/ranger ] && mkdir $HOME/.config/ranger
+        ln -sf $path/config/ranger/rc.conf $HOME/.config/ranger/rc.conf
 	
+
 	wal -i $path/wallpaper.*
 	
 	break
