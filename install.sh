@@ -56,10 +56,15 @@ select de in xfce gnome kde i3; do
 
 	cp $path/.xinitrc $HOME
 	cp $path/.Xresources $HOME
+	cp $path/.bashrc $HOME
 
 	#Config directory
 	[ ! -d $HOME/.config ] && mkdir $HOME/.config
 
+	#i3
+	[ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3
+	cp $path/config $HOME/.config/i3
+	
 	#fonts
 	[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
 	cp $path/fonts.conf $HOME/.config/fontconfig
