@@ -66,12 +66,13 @@ select de in xfce gnome kde i3; do
 
 	#i3
 	[ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3
-	cp $path/config $HOME/.config/i3
+	cp $path/i3_config $HOME/.config/i3/config
 	
 	#polybar
 	[ ! -d $HOME/.config/polybar ] && mkdir $HOME/.config/polybar
 	cp $path/launch.sh $HOME/.config/polybar
 	sudo chmod +x $HOME/.config/polybar/launch.sh
+	cp $path/polybar_config $HOME/.config/polybar/config
 	
 	#fonts
 	[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
