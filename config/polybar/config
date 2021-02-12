@@ -25,13 +25,53 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/mybar]
-modules-right = date
+modules-right = pulseaudio  date
+modules-left = i3 
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 font-0 = monospace:size=10;4
 
+height = 20
+border-size = 0 
+padding-left = 1
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+
 [module/date]
 type = internal/date
-date = %Y-%m-%d%
+interval = 1
+date = %a
+date-alt = %d %a
+time = %H:%M
+time-alt = %H:%M:%S
+label = %date% %time%
+;label-background = ${colors.background-alt}
+
+[module/i3]
+type = internal/i3
+fuzzy-match = false
+ws-icon-0 = 1;dev
+ws-icon-1 = 2;doc
+ws-icon-2 = 3;www
+ws-icon-3 = 4;fun
+ws-icon-4 = 5;cht
+ws-icon-5 = 6;sys
+label-focused = %icon%
+#label-focused-background = ${colors.foreground}
+label-focused-foreground = ${colors.foreground-alt}
+label-focused-padding = 1
+label-occupied = %icon%
+label-occupied-padding = 1
+label-occupied-background = ${colors.background}
+label-occupied-foreground = ${colors.foreground-alt2}
+label-urgent = %icon%
+label-urgent-background = ${colors.background}
+label-urgent-foreground = ${colors.foreground-alt3}
+label-urgent-padding = 1
+label-empty = %icon%
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 1
+label-separator = |
