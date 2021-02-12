@@ -71,6 +71,7 @@ select de in xfce gnome kde i3; do
 	#polybar
 	[ ! -d $HOME/.config/polybar ] && mkdir $HOME/.config/polybar
 	cp $path/launch.sh $HOME/.config/polybar
+	sudo chmod +x $HOME/.config/polybar/launch.sh
 	
 	#fonts
 	[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
