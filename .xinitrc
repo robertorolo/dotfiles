@@ -10,4 +10,6 @@ xrdb ~/.Xresources
 # -R restores the last colorscheme that was in use.
 wal -R
 
+sleep 1s && dunst &
+
 exec i3
