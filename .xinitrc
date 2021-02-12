@@ -5,6 +5,8 @@ for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
 done
 unset f
 
+xrdb ~/.Xresources
+
 # -R restores the last colorscheme that was in use.
 wal -R
 
