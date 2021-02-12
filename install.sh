@@ -57,6 +57,7 @@ select de in xfce gnome kde i3; do
 	cp $path/.xinitrc $HOME
 	cp $path/.Xresources $HOME
 	cp $path/.bashrc $HOME
+	cp $path/.nanorc $HOME
 
 	#Config directory
 	[ ! -d $HOME/.config ] && mkdir $HOME/.config
