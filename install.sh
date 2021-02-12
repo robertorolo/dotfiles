@@ -50,8 +50,10 @@ select de in xfce gnome kde i3; do
     i3)
 	echo "Installing i3..."
 
-	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils feh
+	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils feh imagemagick python-pip
 
+	sudo pip install pywal
+	
 	echo "copying dotfiles..."
 
 	cp $path/.xinitrc $HOME
