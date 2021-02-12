@@ -96,4 +96,4 @@ done
 
 echo "Installing some fancy fonts..."
 yay -S ttf-ubuntu-font-family
-sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code ttf-font-awesome
+sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code awesome-terminal-fonts
