@@ -56,14 +56,14 @@ label = %date% %time%
 type = internal/i3
 fuzzy-match = false
 
-ws-icon-0 = 1;um
-ws-icon-1 = 2;dois
-ws-icon-2 = 3;três
-ws-icon-3 = 4;quatro
-ws-icon-4 = 5;cinco
-ws-icon-5 = 6;seis
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
 
-label-focused = %icon%
+label-focused = 
 label-focused-background = ${colors.primary}
 label-focused-foreground = ${colors.foreground}
 label-focused-padding = 1
@@ -87,7 +87,7 @@ label-empty-foreground = ${colors.foreground}
 ;label-empty-background = ${colors.background}
 label-empty-padding = 1
 
-label-separator = |
+;label-separator = |
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -102,7 +102,7 @@ label-muted = muted
 
 [module/xwindow]
 type = internal/xwindow
-label =  %title:0:100:...%
+label = %title:0:100:...%
 label-foreground = ${colors.foreground}
 label-background = ${colors.primary}
 
@@ -160,7 +160,7 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 98
-format-charging =  <animation-charging> <label-charging>
+format-charging =  <label-charging>
 format-discharging =  <label-discharging>
 format-full =  <label-full>
 label-charging = %percentage%%
