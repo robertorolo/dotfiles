@@ -52,7 +52,7 @@ select de in xfce gnome kde i3; do
 
 	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils feh python-pywal xorg-xbacklight
 	
-	yay -S polybar
+	yay -S polybar awesome-terminal-fonts-git
 	
 	echo "copying dotfiles..."
 
@@ -87,7 +87,7 @@ select de in xfce gnome kde i3; do
 
 done
 
-#echo "Installing some fancy fonts..."
-#yay -S ttf-jetbrains-mono ttf-ms-fonts ttf-ubuntu-font-family ttf-iosevka nerd-fonts-sf-mono 
+echo "Installing some fancy fonts..."
+yay -S ttf-ubuntu-font-family
 
 sudo pacman -S noto-fonts ttf-fira-code ttf-cascadia-code
