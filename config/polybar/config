@@ -29,7 +29,7 @@ color3 = ${xrdb:color6}
 ; | |_) | (_| | |  \__ \
 ; |_.__/ \__,_|_|  |___/
 
-[bar/mybar]
+[bar/base]
 font-0=SF Mono:size=11:antialias=true;3
 font-1=FontAwesome5Free:style=Regular:size=9:antialias=true;3
 font-2=FontAwesome5Free:style=Solid:size=9:antialias=true;3
@@ -47,7 +47,7 @@ offset-y = 10
 ;wm-restack = i3
 
 [bar/i3]
-inherit = bar/mybar
+inherit = bar/base
 width = 35%
 
 foreground = ${colors.color1}
@@ -62,7 +62,7 @@ scroll-down = i3wm-wsprev
 
 
 [bar/music]
-inherit = bar/mybar
+inherit = bar/base
 enable-ipc = true
 width = 28%
 
@@ -75,7 +75,7 @@ offset-x = 55.5%
 modules-left = mpd
 
 [bar/tray]
-inherit = bar/mybar
+inherit = bar/base
 width = 15.5%
 
 padding-right = 0
