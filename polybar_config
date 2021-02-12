@@ -1,4 +1,4 @@
-[bar/minhabarra]
+[bar/mybar]
 modules-right = date
 
 [module/date]
