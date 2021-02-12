@@ -1,21 +1,13 @@
-[bar/mybar]
-modules-right = date
+#!/usr/bin/env bash
 
-[module/date]
-type = internal/date
-date = %Y-%m-%d%
+# Terminate already running bar instances
+killall -q polybar
+# If all your bars have ipc enabled, you can also use 
+# polybar-msg cmd quit
 
-[colors]
-background = ${xrdb:color0:#222}
-foreground = ${xrdb:color7:#222}
-foreground-alt = ${xrdb:color7:#222}
-primary = ${xrdb:color1:#222}
-secondary = ${xrdb:color2:#222}
-alert = ${xrdb:color3:#222}
+# Launch bar1 and bar2
+echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
+polybar bar1 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar bar2 2>&1 | tee -a /tmp/polybar2.log & disown
 
-[bar/bar]
-; ...
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-; ...
+echo "Bars launched..."
