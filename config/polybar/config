@@ -106,3 +106,93 @@ type = internal/xwindow
 label =  %title:0:100:...%
 label-foreground = ${colors.foreground}
 label-background = ${colors.primary}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /home
+label-mounted =  ~/%percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground}
+
+[module/xbacklight]
+type = internal/xbacklight
+format = <label>
+label = lg %percentage%%
+
+[module/wlan1]
+type = internal/network
+interface = wlp58s0
+interval = 1.0
+format-connected = wifi <ramp-signal>
+format-disconnected = <label-disconnected>
+label-disconnected = disc
+label-disconnected-foreground = ${colors.foreground-alt3}
+ramp-signal-0 = 0%
+ramp-signal-1 = 25%
+ramp-signal-2 = 50%
+ramp-signal-3 = 75%
+ramp-signal-4 = 100%
+;ramp-signal-0-foreground = ${colors.foreground-alt2}
+
+[module/wlan2]
+type = internal/network
+interface = wlp58s0
+interval = 1.0
+format-connected = dl<label-connected>
+label-connected =  %downspeed:3%
+
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+base-temperature = 40
+warn-temperature = 70
+units = true
+format = <label>
+format-warn = <label-warn>
+label = t %temperature-c%
+label-warn = t %temperature-c%
+label-warn-foreground = ${colors.foreground-alt3}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+format-charging = <animation-charging> <label-charging>
+format-discharging = bat <label-discharging>
+format-full = full <label-full>
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
+label-full-foreground = ${colors.foreground-alt2}
+;ramp-capacity-0 = +---
+;ramp-capacity-1 = ++--
+;ramp-capacity-2 = +++-
+;ramp-capacity-3 = ++++
+animation-charging-0 = \
+animation-charging-1 = |
+animation-charging-2 = /
+animation-charging-3 = -
+animation-charging-framerate = 100
+
+[module/updates-arch-combined]
+type = custom/script
+exec = ~/.config/polybar/scripts/updates-arch-combined.sh
+interval = 600
+[module/cpu]
+type = internal/cpu
+; Seconds to sleep between updates
+; Default: 1
+interval = 1
+format = <label>
+label = cpu %percentage%%
+[module/memory]
+type = internal/memory
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+format = <label>
+label = ram %gb_used%
