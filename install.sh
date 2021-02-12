@@ -53,7 +53,7 @@ select de in xfce gnome kde i3; do
 
 	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight mpd libmpdclient libmpdclient-dev dunst libnotify
 	
-	yay -S polybar otf-font-awesome-5-free
+	yay -S polybar
 	
 	echo "copying dotfiles..."
 
@@ -96,4 +96,4 @@ done
 
 echo "Installing some fancy fonts..."
 yay -S ttf-ubuntu-font-family
-sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code
+sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code ttf-font-awesome
