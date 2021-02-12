@@ -51,7 +51,7 @@ select de in xfce gnome kde i3; do
     i3)
 	echo "Installing i3 and some basic progrmas..."
 
-	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight mpd dunst
+	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight mpd libmpdclient libmpdclient-dev dunst
 	
 	yay -S polybar otf-font-awesome-5-free
 	
@@ -78,6 +78,10 @@ select de in xfce gnome kde i3; do
 	#fonts
 	[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
 	ln -sf $path/config/fontconfig/fonts.conf $HOME/.config/fontconfig/fonts.conf
+	
+	#dunst
+	[ ! -d $HOME/.config/dunst ] && mkdir $HOME/.config/dunst
+	ln -sf $path/config/dunst/dunstrc $HOME/.config/dunst/dunstrc
 	
 	wal -i $path/wallpaper.*
 	
