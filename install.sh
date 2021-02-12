@@ -50,7 +50,7 @@ select de in xfce gnome kde i3; do
     i3)
 	echo "Installing i3..."
 
-	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils feh python-pywal
+	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils feh python-pywal xorg-xbacklight
 	
 	yay -S polybar
 	
