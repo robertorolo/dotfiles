@@ -1,0 +1,6 @@
+[bar/minhabarra]
+modules-right = date
+
+[module/date]
+type = internal/date
+date = %Y-%m-%d%
