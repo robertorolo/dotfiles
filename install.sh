@@ -13,7 +13,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-echo "Which DE you want to install?"
+echo "Which DE or WM you want to install?"
 
 # Operating system names are used here as a data source
 select de in xfce gnome kde i3; do
@@ -48,37 +48,37 @@ select de in xfce gnome kde i3; do
         break
         ;;
     i3)
-	echo "Installing i3..."
+	echo "Installing i3 and some basic progrmas..."
 
-	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils feh python-pywal xorg-xbacklight xorg-fonts-misc
+	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils feh python-pywal xorg-xbacklight
 	
-	yay -S polybar awesome-terminal-fonts-git siji-git ttf-unifont
+	yay -S polybar awesome-terminal-fonts-git
 	
 	echo "copying dotfiles..."
 
-	cp $path/.xinitrc $HOME
-	cp $path/.Xresources $HOME
-	cp $path/.bashrc $HOME
-	cp $path/.nanorc $HOME
+	ln -sf $path/.xinitrc $HOME/.xinitrc
+	ln -sf $path/.Xresources $HOME/.Xresources
+	ln -sf $path/.bashrc $HOME/.bashrc
+	ln -sf $path/.nanorc $HOME/.nanorc
 
 	#Config directory
 	[ ! -d $HOME/.config ] && mkdir $HOME/.config
 
 	#i3
 	[ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3
-	cp $path/i3_config $HOME/.config/i3/config
+	ln -sf $path/config/i3/config $HOME/.config/i3/config
 	
 	#polybar
 	[ ! -d $HOME/.config/polybar ] && mkdir $HOME/.config/polybar
-	cp $path/launch.sh $HOME/.config/polybar
+	ln -sf $path/config/polybar/launch.sh $HOME/.config/polybar/launch.sh
 	sudo chmod +x $HOME/.config/polybar/launch.sh
-	cp $path/polybar_config $HOME/.config/polybar/config
+	ln -sf $path/config/polybar/config $HOME/.config/polybar/config
 	
 	#fonts
 	[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
-	cp $path/fonts.conf $HOME/.config/fontconfig
+	ln -sf $path/config/fontconfig/fonts.conf $HOME/.config/fontconfig/fonts.conf
 	
-	wal -i $path/1612815160375.jpg
+	wal -i $path/wallpaper.*
 	
 	break
 	;;
@@ -92,4 +92,4 @@ done
 echo "Installing some fancy fonts..."
 yay -S ttf-ubuntu-font-family
 
-sudo pacman -S noto-fonts ttf-fira-code ttf-cascadia-code
+sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code
