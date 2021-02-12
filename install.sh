@@ -1,6 +1,7 @@
 #!/bin/bash
 
 path=$(pwd)
+sudo chmod +x scripts/*
 
 sudo pacman -Syuu
 
@@ -50,9 +51,9 @@ select de in xfce gnome kde i3; do
     i3)
 	echo "Installing i3 and some basic progrmas..."
 
-	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils feh python-pywal xorg-xbacklight
+	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps i3status rxvt-unicode dmenu qutebrowser ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight mpd dunst
 	
-	yay -S polybar awesome-terminal-fonts-git
+	yay -S polybar otf-font-awesome-5-free
 	
 	echo "copying dotfiles..."
 
@@ -91,5 +92,4 @@ done
 
 echo "Installing some fancy fonts..."
 yay -S ttf-ubuntu-font-family
-
 sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code
