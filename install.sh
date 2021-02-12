@@ -69,6 +69,8 @@ select de in xfce gnome kde i3; do
 	[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
 	cp $path/fonts.conf $HOME/.config/fontconfig
 	
+	wal -i $path/1612815160375.jpg
+	
 	break
 	;;
     *)
