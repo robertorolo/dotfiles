@@ -25,4 +25,7 @@ cat ~/.cache/wal/sequences
 
 export PATH=~/dotfiles/scripts:$PATH
 
+EDITOR=nano
+BROWSER=qutebrowser
+
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
