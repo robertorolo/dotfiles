@@ -28,6 +28,11 @@ alert = ${xrdb:color3:#222}
 modules-right = filesystem wlan1 wlan2 battery cpu memory temperature xbacklight pulseaudio date
 modules-left = i3 xwindow 
 
+tray-position = right
+tray-padding = 2
+tray-background = ${colors.background}
+tray-offset-x =
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
