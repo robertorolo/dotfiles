@@ -13,5 +13,6 @@ wal -R
 sleep 1s && dunst &
 
 teclado.sh
+touchpadandtrackpoint.sh
 
 exec i3

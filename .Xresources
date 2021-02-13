@@ -2,7 +2,7 @@
 
 ! General settings
 URxvt.scrollBar: False
-URxvt.internalBorder:  10
+URxvt.internalBorder:  5
 
 ! Transparency
 URxvt*inheritPixmap: true
