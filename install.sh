@@ -61,6 +61,7 @@ select de in xfce gnome kde i3; do
 	ln -sf $path/.Xresources $HOME/.Xresources
 	ln -sf $path/.bashrc $HOME/.bashrc
 	ln -sf $path/.nanorc $HOME/.nanorc
+	ln -sf $path/..gtkrc-2.0 $HOME/.gtkrc-2.0
 
 	#Config directory
 	[ ! -d $HOME/.config ] && mkdir $HOME/.config
@@ -87,6 +88,9 @@ select de in xfce gnome kde i3; do
 	[ ! -d $HOME/.config/ranger ] && mkdir $HOME/.config/ranger
         ln -sf $path/config/ranger/rc.conf $HOME/.config/ranger/rc.conf
 	
+	#gtk
+	[ ! -d $HOME/.config/gtk-3.0 ] && mkdir $HOME/.config/gtk-3.0
+        ln -sf $path/config/gtk-3.0/settings.ini $HOME/.confing/gtk-3.0/settings.ini
 
 	wal -i $path/wallpaper.*
 	

@@ -6,7 +6,9 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ '
+# Lambda PS1
+PS1="  \[\e[00;34m\]λ \W \[\e[0m\]"
 
 # You can create a function for this in your shellrc (.bashrc, .zshrc).
 wal-tile() {
@@ -26,7 +28,7 @@ cat ~/.cache/wal/sequences
 export PATH=~/dotfiles/scripts:$PATH
 
 EDITOR=nano
-BROWSER=qutebrowser
+BROWSER=chromium
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 

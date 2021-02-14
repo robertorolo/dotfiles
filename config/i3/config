@@ -58,6 +58,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec urxvt
 
+#print screen
+bindsym Print exec scrot && notify-send "You took a screenshot!"
+
 # kill focused window
 bindsym $mod+q kill
 
@@ -104,7 +107,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 #bindsym $mod+w layout tabbed
-bindsym $mod+w exec qutebrowser
+bindsym $mod+w exec chromium
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
