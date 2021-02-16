@@ -23,7 +23,7 @@ select de in xfce gnome kde i3; do
     xfe)
         echo "Installing xfce..."
         echo 'Installing xfce and some basic programs'
-        sudo pacman -S xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter chromium network-manager-applet pulseaudio pavucontrol xf86-video-intel bluez bluez-utils blueman file-roller evince flameshot sublime-text mpv transmission-gtk
+        sudo pacman -S xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter chromium network-manager-applet pulseaudio pavucontrol xf86-video-intel picom  bluez bluez-utils blueman file-roller evince flameshot sublime-text mpv transmission-gtk
 
         sudo systemctl enable lightdm
         sudo systemctl enable bluetooth

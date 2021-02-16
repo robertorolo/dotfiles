@@ -14,5 +14,7 @@ sleep 1s && dunst &
 
 teclado.sh
 touchpadandtrackpoint.sh
+#overgrive
+picom -b
 
 exec i3
