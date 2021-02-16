@@ -104,5 +104,5 @@ select de in xfce gnome kde i3; do
 done
 
 echo "Installing some fancy fonts..."
-yay -S ttf-ubuntu-font-family
+yay -S ttf-ubuntu-font-family otb-uw_ttyp0
 sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code awesome-terminal-fonts
