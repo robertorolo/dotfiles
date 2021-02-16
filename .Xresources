@@ -2,7 +2,7 @@
 
 ! General settings
 URxvt.scrollBar: False
-URxvt.internalBorder:  5
+URxvt.internalBorder:  20
 
 ! Transparency
 URxvt*inheritPixmap: true
@@ -12,4 +12,4 @@ URxvt*shading: 20
 
 !Manospace
 URxvt.font: xft:Monospace-10
-URxvt.letterSpace: -1
+URxvt.letterSpace: 0

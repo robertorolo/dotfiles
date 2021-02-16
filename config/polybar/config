@@ -25,8 +25,9 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/mybar]
-modules-right = filesystem wlan1 wlan2 battery cpu memory temperature xbacklight pulseaudio date
+modules-right = filesystem wlan1 wlan2 battery cpu memory xbacklight pulseaudio date
 modules-left = i3 xwindow 
+module-margin = 0
 
 tray-position = right
 tray-padding = 2
@@ -36,8 +37,8 @@ tray-offset-x =
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-;font-0 = monospace:size=10;2
-font-0 = sans:size=10;2
+font-0 = monospace:size=10;2
+;font-0 = sans:size=10;2
 font-1 = FontAwesome:size=10;2
 font-2 = IPAPGothic:size=10;2
 font-3 = IPAPMincho:size10;2
@@ -101,7 +102,7 @@ type = internal/pulseaudio
 sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 use-ui-max = true
 interval = 5
-format-volume =  <label-volume>
+format-volume = V <label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${colors.foreground}
 format-muted-foreground = ${colors.foreground}
@@ -111,28 +112,28 @@ label-muted = muted
 type = internal/xwindow
 label = %title:0:100:...%
 label-foreground = ${colors.foreground}
-label-background = ${colors.primary}
+;label-background = ${colors.primary}
 
 [module/filesystem]
 type = internal/fs
 interval = 25
 mount-0 = /
-label-mounted =   ~/%percentage_used%%
+label-mounted = HDD  ~/%percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground}
 
 [module/xbacklight]
 type = internal/xbacklight
 format = <label>
-label =  %percentage%%
+label = B %percentage%%
 
 [module/wlan1]
 type = internal/network
 interface = wlp3s0
 interval = 1.0
-format-connected =  <ramp-signal>
+format-connected = C  <ramp-signal>
 format-disconnected = <label-disconnected>
-label-disconnected = 
+label-disconnected = DISC
 label-disconnected-foreground = ${colors.foreground-alt3}
 ramp-signal-0 = 0%
 ramp-signal-1 = 25%
@@ -146,7 +147,7 @@ type = internal/network
 interface = wlp3s0
 interval = 1.0
 format-connected = <label-connected>
-label-connected =  %downspeed:3%
+label-connected = D %downspeed:3%
 
 [module/temperature]
 type = internal/temperature
@@ -167,9 +168,9 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 98
-format-charging =  <label-charging>
-format-discharging =  <label-discharging>
-format-full =  <label-full>
+format-charging = C <label-charging>
+format-discharging = D <label-discharging>
+format-full = F <label-full>
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = %percentage%%
@@ -190,7 +191,7 @@ type = internal/cpu
 ; Default: 1
 interval = 1
 format = <label>
-label =  %percentage%%
+label = CPU %percentage%%
 
 [module/memory]
 type = internal/memory
@@ -198,4 +199,4 @@ type = internal/memory
 ; Default: 1
 interval = 3
 format = <label>
-label =  %gb_used%
+label = RAM %gb_used%

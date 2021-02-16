@@ -15,6 +15,7 @@ sleep 1s && dunst &
 teclado.sh
 touchpadandtrackpoint.sh
 #overgrive
-picom -b
+compton --backend glx --paint-on-overlay --vsync opengl-swc 
+
 
 exec i3
