@@ -37,7 +37,7 @@ for_window [class="^.*"] border pixel 0
 # is used in the bar {} block below.
 font pango:monospace 10
 
-smart_gaps on
+#smart_gaps on
 gaps inner 10
 gaps outer 0
 
