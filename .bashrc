@@ -20,7 +20,7 @@ PS1="\[\e[00;34m\]λ \W \[\e[0m\]"
 cat ~/.cache/wal/sequences
 
 export PATH=~/dotfiles/scripts:$PATH
-export PF_INFO="title os host kernel uptime pkgs wm palette"
+export PF_INFO="title os host kernel uptime pkgs wm shell palette"
 
 EDITOR=vim
 BROWSER=chromium
