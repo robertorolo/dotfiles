@@ -25,7 +25,7 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/mybar]
-modules-right = filesystem wlan1 wlan2 battery cpu memory xbacklight pulseaudio date
+modules-right = filesystem wlan1 battery cpu memory xbacklight pulseaudio date
 modules-left = i3 xwindow 
 module-margin = 0
 
@@ -168,11 +168,13 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 98
+time-format = %H:%M
+
 format-charging = BAT CHARGING <label-charging>
 format-discharging = BAT DISCHARGING <label-discharging>
 format-full = BT FULL <label-full>
 label-charging = %percentage%%
-label-discharging = %percentage%%
+label-discharging = %percentage%% %time%
 label-full = %percentage%%
 label-full-foreground = ${colors.foreground-alt2}
 ;ramp-capacity-0 = +---
