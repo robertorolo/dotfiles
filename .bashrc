@@ -26,6 +26,7 @@ wal-tile() {
 cat ~/.cache/wal/sequences
 
 export PATH=~/dotfiles/scripts:$PATH
+export PF_INFO="title os host kernel uptime pkgs wm palette"
 
 EDITOR=nano
 BROWSER=chromium
