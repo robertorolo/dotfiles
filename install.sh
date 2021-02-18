@@ -61,7 +61,8 @@ select de in xfce gnome kde i3; do
 	ln -sf $path/.Xresources $HOME/.Xresources
 	ln -sf $path/.bashrc $HOME/.bashrc
 	ln -sf $path/.nanorc $HOME/.nanorc
-	ln -sf $path/..gtkrc-2.0 $HOME/.gtkrc-2.0
+	ln -sf $path/.gtkrc-2.0 $HOME/.gtkrc-2.0
+	ln -sf $path/.vimrc $HOME/.vimrc
 
 	#Config directory
 	[ ! -d $HOME/.config ] && mkdir $HOME/.config

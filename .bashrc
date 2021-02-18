@@ -34,6 +34,7 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 alias ss='scrot "%Y-%m-%d_$wx$h.png" -e "mv ~/ss/$f" && notify-send "you took a screenshot!"'
 alias n='nano --mouse'
+alias v='vim'
 
 shopt -s cdspell
 
