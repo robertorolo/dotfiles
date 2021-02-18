@@ -106,7 +106,7 @@ format-volume = VOL <label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${colors.foreground}
 format-muted-foreground = ${colors.foreground}
-label-muted = muted
+label-muted = MUTE
 
 [module/xwindow]
 type = internal/xwindow

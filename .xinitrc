@@ -16,6 +16,6 @@ teclado.sh
 touchpadandtrackpoint.sh
 #overgrive
 compton --backend glx --paint-on-overlay --vsync opengl-swc 
-
+sh ~/.fehbg
 
 exec i3

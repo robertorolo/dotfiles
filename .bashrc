@@ -8,7 +8,7 @@
 alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
 # Lambda PS1
-PS1="  \[\e[00;34m\]λ \W \[\e[0m\]"
+PS1="\[\e[00;34m\]λ \W \[\e[0m\]"
 
 # You can create a function for this in your shellrc (.bashrc, .zshrc).
 wal-tile() {
@@ -33,3 +33,21 @@ BROWSER=chromium
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 alias ss='scrot "%Y-%m-%d_$wx$h.png" -e "mv ~/ss/$f" && notify-send "you took a screenshot!"'
+
+shopt -s cdspell
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/void/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/void/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/void/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/void/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
