@@ -10,12 +10,6 @@ alias ls='ls --color=auto'
 # Lambda PS1
 PS1="\[\e[00;34m\]λ \W \[\e[0m\]"
 
-# You can create a function for this in your shellrc (.bashrc, .zshrc).
-wal-tile() {
-    wal -n -i "$@"
-    feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
-}
-
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
@@ -33,8 +27,6 @@ BROWSER=chromium
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
-alias ss='scrot "%Y-%m-%d_$wx$h.png" -e "mv ~/ss/$f" && notify-send "you took a screenshot!"'
-alias n='nano --mouse'
 alias v='vim'
 alias wg='ranger Google\ Drive/Images/wg '
 
