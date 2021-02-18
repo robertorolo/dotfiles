@@ -149,20 +149,6 @@ interval = 1.0
 format-connected = <label-connected>
 label-connected = DOWN %downspeed:3%
 
-[module/temperature]
-type = internal/temperature
-interval = 0.5
-thermal-zone = 0
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
-base-temperature = 40
-warn-temperature = 70
-units = true
-format = <label>
-format-warn = <label-warn>
-label = t %temperature-c%
-label-warn = t %temperature-c%
-label-warn-foreground = ${colors.foreground-alt3}
-
 [module/battery]
 type = internal/battery
 battery = BAT0
