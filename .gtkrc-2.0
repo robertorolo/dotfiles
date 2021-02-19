@@ -4,7 +4,7 @@
 include "/home/void/.gtkrc-2.0.mine"
 gtk-theme-name="Qogir-dark"
 gtk-icon-theme-name="Qogir-dark"
-gtk-font-name="Ubuntu 8"
+gtk-font-name="Roboto 10"
 gtk-cursor-theme-name="Qogir"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH

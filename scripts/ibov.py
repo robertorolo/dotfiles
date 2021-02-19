@@ -1,4 +1,4 @@
-#!/home/void/anaconda3/envs/drh/bin/python
+#!/home/void/anaconda3/bin/python
 
 #a function to retrieve ibov value
 import requests

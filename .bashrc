@@ -31,7 +31,7 @@ alias v='vim'
 alias g='git'
 alias f='pfetch'
 alias c='colorscript -r'
-alias wg='ranger Google\ Drive/Images/wg '
+alias wg='ranger $HOME/Google\ Drive/Images/wg '
 
 shopt -s cdspell
 
