@@ -28,6 +28,9 @@ BROWSER=chromium
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 alias v='vim'
+alias g='git'
+alias f='pfetch'
+alias c='colorscript -r'
 alias wg='ranger Google\ Drive/Images/wg '
 
 shopt -s cdspell
