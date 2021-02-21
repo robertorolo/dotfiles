@@ -93,6 +93,11 @@ select de in xfce gnome kde i3; do
 	[ ! -d $HOME/.config/gtk-3.0 ] && mkdir $HOME/.config/gtk-3.0
         ln -sf $path/config/gtk-3.0/settings.ini $HOME/.confing/gtk-3.0/settings.ini
 
+
+	#qutebrowser
+	[ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
+	ln -sf $path/config/qutebrowser/autoconfig.yml $HOME/.confing/qutebrowser/autoconfig.yml
+
 	wal -i $path/wallpaper.*
 	
 	break
