@@ -23,7 +23,8 @@ export PATH=~/dotfiles/scripts:$PATH
 export PF_INFO="title os host kernel uptime pkgs wm shell palette"
 
 EDITOR=vim
-BROWSER=chromium
+#BROWSER=chromium
+#BROWSER=qutebrowser
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
