@@ -33,7 +33,7 @@ alias g='git'
 alias f='pfetch'
 alias c='colorscript -r'
 alias wg='ranger $HOME/Google\ Drive/Images/wg '
-alias i3conf='v .config/i3/config'
+alias i3conf='v $HOME/.config/i3/config'
 
 shopt -s cdspell
 

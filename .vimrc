@@ -20,6 +20,13 @@ runtime! archlinux.vim
 syntax on
 set laststatus=2
 set clipboard=unnamedplus
+set mouse+=a
+set hls
+set showmatch
+set number
+set ignorecase
+set incsearch
+set autoindent
 
 " plugins
 
