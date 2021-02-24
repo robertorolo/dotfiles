@@ -1,8 +1,9 @@
 #!/home/void/anaconda3/bin/python
+import sys
 
 try:
-    import requests and import yahoo_fin
-except ImportError, e:
+    import requests, yahoo_fin
+except ModuleNotFoundError:
     print('Missing dependencies...')
 
 #a function to retrieve ibov value
