@@ -1,5 +1,7 @@
 #!/bin/bash
 
+path=$(pwd)
+
 echo "Install programs and dependencies?"
 select de in yes no; do
 	case $de in
@@ -39,7 +41,6 @@ select de in yes no; do
 done
 
 echo "copying dotfiles..."
-path=$(pwd)
 
 ln -sfv $path/.xinitrc $HOME/.xinitrc
 ln -sfv $path/.Xresources $HOME/.Xresources
