@@ -19,17 +19,12 @@ select de in yes no; do
 		makepkg -si
 
 		echo "Installing i3 and some your system dependencies..."
-		sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode dmenu qutebrowser chromium  ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim lxappearance otf-ipafont
-		yay -S polybar qogir-gtk-theme qogir-icon-theme 
+		sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode dmenu qutebrowser chromium  ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim lxappearance otf-ipafont~noto-fonts-emoji ttf-fira-code ttf-cascadia-code awesome-terminal-fonts
+		yay -S polybar qogir-gtk-theme qogir-icon-theme ttf-ubuntu-font-family ttf-roboto otb-uw_ttyp0
 		
 		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-		echo "Installing some fancy fonts..."
-		yay -S ttf-ubuntu-font-family ttf-roboto otb-uw_ttyp0
-		sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code awesome-terminal-fonts
-
-		#wal -i $path/wallpaper.*
 		wal --theme gruvbox
 
 		break
@@ -43,7 +38,6 @@ select de in yes no; do
 		echo "Invalid entry."
 		;;
 	esac
-
 done
 
 echo "copying dotfiles..."
@@ -66,7 +60,6 @@ ln -sfv $path/config/i3/config $HOME/.config/i3/config
 [ ! -d $HOME/.config/polybar ] && mkdir $HOME/.config/polybar
 sudo chmod -v +x $path/config/polybar/launch.sh
 ln -sfv $path/config/polybar/launch.sh $HOME/.config/polybar/launch.sh
-#sudo chmod -v +x $HOME/.config/polybar/launch.sh
 ln -sfv $path/config/polybar/config $HOME/.config/polybar/config
 
 #fonts
