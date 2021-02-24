@@ -28,7 +28,7 @@ EDITOR=vim
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
-alias v='vim'
+alias v='nvim'
 alias g='git'
 alias f='pfetch'
 alias c='colorscript -r'

@@ -28,6 +28,12 @@ set ignorecase
 set incsearch
 set autoindent
 
+" copy and paste
+nnoremap <C-y> "+y
+vnoremap <C-y> "+y
+nnoremap <C-p> "+gP
+vnoremap <C-P> "+gP
+
 " plugins
 
 if empty(glob('~/.vim/autoload/plug.vim'))

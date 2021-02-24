@@ -51,7 +51,7 @@ select de in xfce gnome kde i3; do
     i3)
 	echo "Installing i3 and some basic progrmas..."
 
-	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode dmenu qutebrowser chromium  ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm vim lxappearance otf-ipafont
+	sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode dmenu qutebrowser chromium  ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim lxappearance otf-ipafont
 	
 	yay -S polybar qogir-gtk-theme qogir-icon-theme 
 	
@@ -62,7 +62,6 @@ select de in xfce gnome kde i3; do
 	ln -sf $path/.bashrc $HOME/.bashrc
 	ln -sf $path/.nanorc $HOME/.nanorc
 	ln -sf $path/.gtkrc-2.0 $HOME/.gtkrc-2.0
-	ln -sf $path/.vimrc $HOME/.vimrc
 
 	#Config directory
 	[ ! -d $HOME/.config ] && mkdir $HOME/.config
@@ -96,6 +95,10 @@ select de in xfce gnome kde i3; do
 	#qutebrowser
 	[ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
 	ln -sf $path/config/qutebrowser/autoconfig.yml $HOME/.confing/qutebrowser/autoconfig.yml
+
+	#nvim
+	[ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
+	ln -sf $path/config/nvim/init.vim $HOME/.confing/nvim/init.vim
 
 	wal -i $path/wallpaper.*
 	
