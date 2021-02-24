@@ -78,12 +78,12 @@ ln -sf $path/config/ranger/rc.conf $HOME/.config/ranger/rc.conf
 
 #gtk
 [ ! -d $HOME/.config/gtk-3.0 ] && mkdir $HOME/.config/gtk-3.0
-ln -sf $path/config/gtk-3.0/settings.ini $HOME/.confing/gtk-3.0/settings.ini
+ln -sf $path/config/gtk-3.0/settings.ini $HOME/.config/gtk-3.0/settings.ini
 
 #qutebrowser
 [ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
-ln -sf $path/config/qutebrowser/autoconfig.yml $HOME/.confing/qutebrowser/autoconfig.yml
+ln -sf $path/config/qutebrowser/autoconfig.yml $HOME/.config/qutebrowser/autoconfig.yml
 
 #nvim
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
-ln -sf $path/config/nvim/init.vim $HOME/.confing/nvim/init.vim
+ln -sf $path/config/nvim/init.vim $HOME/.config/nvim/init.vim
