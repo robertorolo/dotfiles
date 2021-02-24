@@ -21,6 +21,9 @@ select de in yes no; do
 		echo "Installing i3 and some your system dependencies..."
 		sudo pacman -S xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode dmenu qutebrowser chromium  ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim lxappearance otf-ipafont
 		yay -S polybar qogir-gtk-theme qogir-icon-theme 
+		
+		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 		echo "Installing some fancy fonts..."
 		yay -S ttf-ubuntu-font-family ttf-roboto otb-uw_ttyp0
