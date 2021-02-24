@@ -5,7 +5,6 @@ select de in yes no; do
 	case $de in
 		
 		yes)
-		path=$(pwd)
 		sudo chmod +x scripts/*
 
 		sudo pacman -Syuu
@@ -44,6 +43,7 @@ select de in yes no; do
 done
 
 echo "copying dotfiles..."
+path=$(pwd)
 
 ln -sfv $path/.xinitrc $HOME/.xinitrc
 ln -sfv $path/.Xresources $HOME/.Xresources
