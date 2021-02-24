@@ -33,51 +33,6 @@ select de in yes no; do
 		;;
 
 		no)
-		echo "copying dotfiles..."
-
-		ln -sf $path/.xinitrc $HOME/.xinitrc
-		ln -sf $path/.Xresources $HOME/.Xresources
-		ln -sf $path/.bashrc $HOME/.bashrc
-		ln -sf $path/.nanorc $HOME/.nanorc
-		ln -sf $path/.gtkrc-2.0 $HOME/.gtkrc-2.0
-
-		#Config directory
-		[ ! -d $HOME/.config ] && mkdir $HOME/.config
-
-		#i3
-		[ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3
-		ln -sf $path/config/i3/config $HOME/.config/i3/config
-
-		#polybar
-		[ ! -d $HOME/.config/polybar ] && mkdir $HOME/.config/polybar
-		ln -sf $path/config/polybar/launch.sh $HOME/.config/polybar/launch.sh
-		sudo chmod +x $HOME/.config/polybar/launch.sh
-		ln -sf $path/config/polybar/config $HOME/.config/polybar/config
-
-		#fonts
-		[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
-		ln -sf $path/config/fontconfig/fonts.conf $HOME/.config/fontconfig/fonts.conf
-
-		#dunst
-		[ ! -d $HOME/.config/dunst ] && mkdir $HOME/.config/dunst
-		ln -sf $path/config/dunst/dunstrc $HOME/.config/dunst/dunstrc
-
-		#ranger
-		[ ! -d $HOME/.config/ranger ] && mkdir $HOME/.config/ranger
-		ln -sf $path/config/ranger/rc.conf $HOME/.config/ranger/rc.conf
-
-		#gtk
-		[ ! -d $HOME/.config/gtk-3.0 ] && mkdir $HOME/.config/gtk-3.0
-		ln -sf $path/config/gtk-3.0/settings.ini $HOME/.confing/gtk-3.0/settings.ini
-
-		#qutebrowser
-		[ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
-		ln -sf $path/config/qutebrowser/autoconfig.yml $HOME/.confing/qutebrowser/autoconfig.yml
-
-		#nvim
-		[ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
-		ln -sf $path/config/nvim/init.vim $HOME/.confing/nvim/init.vim
-
 		break
 		;;
 
@@ -87,3 +42,48 @@ select de in yes no; do
 	esac
 
 done
+
+echo "copying dotfiles..."
+
+ln -sf $path/.xinitrc $HOME/.xinitrc
+ln -sf $path/.Xresources $HOME/.Xresources
+ln -sf $path/.bashrc $HOME/.bashrc
+ln -sf $path/.nanorc $HOME/.nanorc
+ln -sf $path/.gtkrc-2.0 $HOME/.gtkrc-2.0
+
+#Config directory
+[ ! -d $HOME/.config ] && mkdir $HOME/.config
+
+#i3
+[ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3
+ln -sf $path/config/i3/config $HOME/.config/i3/config
+
+#polybar
+[ ! -d $HOME/.config/polybar ] && mkdir $HOME/.config/polybar
+ln -sf $path/config/polybar/launch.sh $HOME/.config/polybar/launch.sh
+sudo chmod +x $HOME/.config/polybar/launch.sh
+ln -sf $path/config/polybar/config $HOME/.config/polybar/config
+
+#fonts
+[ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
+ln -sf $path/config/fontconfig/fonts.conf $HOME/.config/fontconfig/fonts.conf
+
+#dunst
+[ ! -d $HOME/.config/dunst ] && mkdir $HOME/.config/dunst
+ln -sf $path/config/dunst/dunstrc $HOME/.config/dunst/dunstrc
+
+#ranger
+[ ! -d $HOME/.config/ranger ] && mkdir $HOME/.config/ranger
+ln -sf $path/config/ranger/rc.conf $HOME/.config/ranger/rc.conf
+
+#gtk
+[ ! -d $HOME/.config/gtk-3.0 ] && mkdir $HOME/.config/gtk-3.0
+ln -sf $path/config/gtk-3.0/settings.ini $HOME/.confing/gtk-3.0/settings.ini
+
+#qutebrowser
+[ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
+ln -sf $path/config/qutebrowser/autoconfig.yml $HOME/.confing/qutebrowser/autoconfig.yml
+
+#nvim
+[ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
+ln -sf $path/config/nvim/init.vim $HOME/.confing/nvim/init.vim
