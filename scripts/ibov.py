@@ -1,5 +1,10 @@
 #!/home/void/anaconda3/bin/python
 
+try:
+    import requests and import yahoo_fin
+except ImportError, e:
+    print('Missing dependencies...')
+
 #a function to retrieve ibov value
 import requests
 from yahoo_fin import stock_info as si
