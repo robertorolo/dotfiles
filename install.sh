@@ -25,8 +25,7 @@ select de in yes no; do
 		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-		wal --theme gruvbox
-
+		wal --theme base16-gruvbox-hard
 		break
 		;;
 
