@@ -22,9 +22,9 @@ cat ~/.cache/wal/sequences
 export PATH=~/dotfiles/scripts:$PATH
 export PF_INFO="title os host kernel uptime pkgs wm shell palette"
 
-EDITOR=nvim
-#BROWSER=chromium
-#BROWSER=qutebrowser
+export EDITOR=nvim;
+export VISUAL=nvim;
+export BROWSER=chromium;
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
