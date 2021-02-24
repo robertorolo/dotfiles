@@ -45,7 +45,7 @@ done
 
 echo "copying dotfiles..."
 
-sudo pacman -Syuu
+su
 
 ln -sf $path/.xinitrc $HOME/.xinitrc
 ln -sf $path/.Xresources $HOME/.Xresources
@@ -64,7 +64,7 @@ ln -sf $path/config/i3/config $HOME/.config/i3/config
 [ ! -d $HOME/.config/polybar ] && mkdir $HOME/.config/polybar
 #sudo chmod +x $path/config/polybar/launch.sh
 ln -sf $path/config/polybar/launch.sh $HOME/.config/polybar/launch.sh
-#sudo chmod +x $HOME/.config/polybar/launch.sh
+sudo chmod +x $HOME/.config/polybar/launch.sh
 ln -sf $path/config/polybar/config $HOME/.config/polybar/config
 
 #fonts
