@@ -45,48 +45,46 @@ done
 
 echo "copying dotfiles..."
 
-su
-
-ln -sf $path/.xinitrc $HOME/.xinitrc
-ln -sf $path/.Xresources $HOME/.Xresources
-ln -sf $path/.bashrc $HOME/.bashrc
-ln -sf $path/.nanorc $HOME/.nanorc
-ln -sf $path/.gtkrc-2.0 $HOME/.gtkrc-2.0
+ln -sfv $path/.xinitrc $HOME/.xinitrc
+ln -sfv $path/.Xresources $HOME/.Xresources
+ln -sfv $path/.bashrc $HOME/.bashrc
+ln -sfv $path/.nanorc $HOME/.nanorc
+ln -sfv $path/.gtkrc-2.0 $HOME/.gtkrc-2.0
 
 #Config directory
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
 
 #i3
 [ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3
-ln -sf $path/config/i3/config $HOME/.config/i3/config
+ln -sfv $path/config/i3/config $HOME/.config/i3/config
 
 #polybar
 [ ! -d $HOME/.config/polybar ] && mkdir $HOME/.config/polybar
 #sudo chmod +x $path/config/polybar/launch.sh
-ln -sf $path/config/polybar/launch.sh $HOME/.config/polybar/launch.sh
-sudo chmod +x $HOME/.config/polybar/launch.sh
-ln -sf $path/config/polybar/config $HOME/.config/polybar/config
+ln -sfv $path/config/polybar/launch.sh $HOME/.config/polybar/launch.sh
+sudo chmod +xv $HOME/.config/polybar/launch.sh
+ln -sfv $path/config/polybar/config $HOME/.config/polybar/config
 
 #fonts
 [ ! -d $HOME/.config/fontconfig ] && mkdir $HOME/.config/fontconfig
-ln -sf $path/config/fontconfig/fonts.conf $HOME/.config/fontconfig/fonts.conf
+ln -sfv $path/config/fontconfig/fonts.conf $HOME/.config/fontconfig/fonts.conf
 
 #dunst
 [ ! -d $HOME/.config/dunst ] && mkdir $HOME/.config/dunst
-ln -sf $path/config/dunst/dunstrc $HOME/.config/dunst/dunstrc
+ln -sfv $path/config/dunst/dunstrc $HOME/.config/dunst/dunstrc
 
 #ranger
 [ ! -d $HOME/.config/ranger ] && mkdir $HOME/.config/ranger
-ln -sf $path/config/ranger/rc.conf $HOME/.config/ranger/rc.conf
+ln -sfv $path/config/ranger/rc.conf $HOME/.config/ranger/rc.conf
 
 #gtk
 [ ! -d $HOME/.config/gtk-3.0 ] && mkdir $HOME/.config/gtk-3.0
-ln -sf $path/config/gtk-3.0/settings.ini $HOME/.config/gtk-3.0/settings.ini
+ln -sfv $path/config/gtk-3.0/settings.ini $HOME/.config/gtk-3.0/settings.ini
 
 #qutebrowser
 [ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
-ln -sf $path/config/qutebrowser/autoconfig.yml $HOME/.config/qutebrowser/autoconfig.yml
+ln -sfv $path/config/qutebrowser/autoconfig.yml $HOME/.config/qutebrowser/autoconfig.yml
 
 #nvim
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
-ln -sf $path/config/nvim/init.vim $HOME/.config/nvim/init.vim
+ln -sfv $path/config/nvim/init.vim $HOME/.config/nvim/init.vim
