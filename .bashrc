@@ -22,7 +22,7 @@ cat ~/.cache/wal/sequences
 export PATH=~/dotfiles/scripts:$PATH
 export PF_INFO="title os host kernel uptime pkgs wm shell palette"
 
-EDITOR=vim
+EDITOR=nvim
 #BROWSER=chromium
 #BROWSER=qutebrowser
 
