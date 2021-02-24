@@ -62,7 +62,7 @@ ln -sfv $path/config/i3/config $HOME/.config/i3/config
 [ ! -d $HOME/.config/polybar ] && mkdir $HOME/.config/polybar
 #sudo chmod +x $path/config/polybar/launch.sh
 ln -sfv $path/config/polybar/launch.sh $HOME/.config/polybar/launch.sh
-sudo chmod +xv $HOME/.config/polybar/launch.sh
+sudo chmod -v +x $HOME/.config/polybar/launch.sh
 ln -sfv $path/config/polybar/config $HOME/.config/polybar/config
 
 #fonts
