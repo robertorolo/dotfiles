@@ -45,6 +45,8 @@ done
 
 echo "copying dotfiles..."
 
+sudo chmod +x $path/config/polybar/launch.sh
+
 ln -sf $path/.xinitrc $HOME/.xinitrc
 ln -sf $path/.Xresources $HOME/.Xresources
 ln -sf $path/.bashrc $HOME/.bashrc
