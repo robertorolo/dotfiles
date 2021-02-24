@@ -29,7 +29,8 @@ select de in yes no; do
 		yay -S ttf-ubuntu-font-family ttf-roboto otb-uw_ttyp0
 		sudo pacman -S noto-fonts-emoji ttf-fira-code ttf-cascadia-code awesome-terminal-fonts
 
-		wal -i $path/wallpaper.*
+		#wal -i $path/wallpaper.*
+		wal --theme gruvbox
 
 		break
 		;;
