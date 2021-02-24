@@ -7,7 +7,7 @@ select de in yes no; do
 		yes)
 		echo "Installing i3 and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode dmenu qutebrowser chromium  ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim lxappearance otf-ipafont~noto-fonts-emoji ttf-fira-code ttf-cascadia-code awesome-terminal-fonts
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode dmenu qutebrowser chromium  ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim lxappearance otf-ipafont noto-fonts-emoji ttf-fira-code ttf-cascadia-code awesome-terminal-fonts
 		
 		echo 'Instaling yay...'
 		mkdir ~/.local
