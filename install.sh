@@ -9,7 +9,7 @@ select de in yes no; do
 		yes)
 		echo "Installing i3 and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode dmenu qutebrowser chromium  ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji ttf-fira-code ttf-cascadia-code awesome-terminal-fonts
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode dmenu qutebrowser chromium  ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji 
 		
 		echo 'Instaling yay...'
 		mkdir ~/.local
@@ -20,7 +20,7 @@ select de in yes no; do
 		makepkg -si
 
 		echo 'Instaling AUR and git programs...'
-		yay -S polybar qogir-gtk-theme qogir-icon-theme ttf-ubuntu-font-family ttf-roboto otb-uw_ttyp0
+		yay -S polybar ttf-roboto otb-uw_ttyp0
 		
 		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -83,5 +83,8 @@ ln -sfv $path/config/qutebrowser/autoconfig.yml $HOME/.config/qutebrowser/autoco
 #nvim
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
 ln -sfv $path/config/nvim/init.vim $HOME/.config/nvim/init.vim
+
+#theme
+cp -r $path/.themes $HOME
 
 sudo chmod +x scripts/*
