@@ -2,10 +2,10 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/void/.gtkrc-2.0.mine"
-gtk-theme-name="Qogir-dark"
-gtk-icon-theme-name="Qogir-dark"
+gtk-theme-name="gruvbox-gtk-master"
+gtk-icon-theme-name="Adwaita"
 gtk-font-name="Roboto 10"
-gtk-cursor-theme-name="Qogir"
+gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
