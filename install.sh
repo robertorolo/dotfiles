@@ -9,7 +9,7 @@ select de in yes no; do
 		yes)
 		echo "Installing i3 and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode dmenu qutebrowser chromium  ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji 
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode rofi qutebrowser chromium  ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji 
 		
 		echo 'Instaling yay...'
 		mkdir ~/.local
@@ -83,6 +83,11 @@ ln -sfv $path/config/qutebrowser/autoconfig.yml $HOME/.config/qutebrowser/autoco
 #nvim
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
 ln -sfv $path/config/nvim/init.vim $HOME/.config/nvim/init.vim
+
+#rofi
+[ ! -d $HOME/.config/rofi ] && mkdir $HOME/.config/rofi
+ln -sfv $path/config/rofi/config.rasi $HOME/.config/rofi/config.rasi
+ln -sfv $path/config/rofi/gruvbox-dark-hard.rasi $HOME/.config/rofi/gruvbox-dark-hard.rasi
 
 #theme
 cp -r $path/.themes $HOME
