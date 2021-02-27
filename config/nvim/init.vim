@@ -27,6 +27,12 @@ set number
 set ignorecase
 set incsearch
 set autoindent
+set encoding=utf-8
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+" Enable folding with the spacebar
+nnoremap <space> za
 
 " copy and paste
 nnoremap <C-y> "+y
@@ -34,8 +40,22 @@ vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
 vnoremap <C-P> "+gP
 
-" plugins
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+" plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -57,6 +77,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree' 
 
 " Initialize plugin system
 call plug#end()
@@ -64,3 +85,9 @@ call plug#end()
 colorscheme gruvbox
 hi! Normal guibg=NONE ctermbg=NONE
 hi! NonText guibg=NONE ctermbg=NONE
+
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+nnoremap <C-n> :NERDTree<CR>
