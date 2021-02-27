@@ -93,6 +93,6 @@ ln -sfv $path/config/rofi/gruvbox-dark-hard.rasi $HOME/.config/rofi/gruvbox-dark
 cp -r $path/.themes $HOME
 
 #icons
-cp -r $path/.icons $HOME
+#cp -r $path/.icons $HOME
 
 sudo chmod +x scripts/*
