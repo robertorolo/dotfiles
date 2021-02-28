@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls='ls -hN --color=auto --group-directories-first'
 #PS1='[\u@\h \W]\$ '
 # Lambda PS1
 PS1="\[\e[00;34m\]λ \W \[\e[0m\]"
@@ -25,12 +25,15 @@ export PF_INFO="title os host kernel uptime pkgs wm shell palette"
 export EDITOR=nvim;
 export VISUAL=nvim;
 export BROWSER=chromium;
+export TERMINAL=urxvt;
+export READER=zathura;
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 alias v='nvim'
 alias g='git'
 alias f='pfetch'
+alias p='sudo pacman'
 alias c='colorscript -r'
 alias wg='ranger $HOME/Google\ Drive/Images/wg '
 alias i3conf='v $HOME/.config/i3/config'
@@ -85,6 +88,7 @@ extract () {
 
 
 shopt -s cdspell
+shopt -s autocd
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

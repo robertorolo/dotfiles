@@ -161,22 +161,13 @@ adapter = AC
 full-at = 98
 time-format = %H:%M
 
-format-charging = BAT CHARGING <label-charging>
-format-discharging = BAT DISCHARGING <label-discharging>
-format-full = BT FULL <label-full>
+format-charging = CHARGING <label-charging>
+format-discharging = DISCHARGING <label-discharging>
+format-full = FULL <label-full>
 label-charging = %percentage%%
 label-discharging = %percentage%% %time%
 label-full = %percentage%%
 label-full-foreground = ${colors.foreground-alt2}
-;ramp-capacity-0 = +---
-;ramp-capacity-1 = ++--
-;ramp-capacity-2 = +++-
-;ramp-capacity-3 = ++++
-animation-charging-0 = \
-animation-charging-1 = |
-animation-charging-2 = /
-animation-charging-3 = -
-animation-charging-framerate = 100
 
 [module/cpu]
 type = internal/cpu
