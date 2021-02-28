@@ -1,4 +1,6 @@
-#!/bin/bash path=$(pwd)
+#!/bin/bash 
+
+path=$(pwd)
 
 echo "Install programs and dependencies?"
 select de in yes no; do
