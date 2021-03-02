@@ -86,6 +86,9 @@ extract () {
 	done
 }
 
+mypv () {
+  pv -tpreb "$1" >"$2"
+}
 
 shopt -s cdspell
 shopt -s autocd
