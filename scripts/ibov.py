@@ -1,4 +1,4 @@
-#!/home/void/anaconda3/bin/python
+#!/usr/bin/env python3
 import sys
 
 try:
