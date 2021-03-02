@@ -61,7 +61,7 @@ bindsym $mod+Return exec urxvt
 
 #print screen
 bindsym Print exec scrot && notify-send "You took a screenshot!"
-bindsym --release Shift+Print exec scrot -s && notify-send "You took a screenshot!"
+bindsym --release Shift+Print exec scrot -s  scrot -e 'xclip -selection c -t image/png < $f' && notify-send "You took a screenshot!"
 
 
 # kill focused window

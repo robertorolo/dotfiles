@@ -9,7 +9,7 @@ select de in yes no; do
 		yes)
 		echo "Installing i3 and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode rofi qutebrowser ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji ttf-roboto-mono python-pip
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode rofi qutebrowser ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji ttf-roboto-mono python-pip xclip
 		
 		echo 'Instaling yay...'
 		mkdir ~/.local
@@ -85,8 +85,8 @@ ln -sfv $path/config/gtk-3.0/settings.ini $HOME/.config/gtk-3.0/settings.ini
 
 #qutebrowser
 [ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
-ln -sfv $path/config/qutebrowser/autoconfig.yml $HOME/.config/qutebrowser/autoconfig.yml
-mkdir $HOME/Downloads
+ln -sfv $path/config/qutebrowser/config.py $HOME/.config/qutebrowser/config.py
+ln -sfv $path/config/qutebrowser/gruvbox.py $HOME/.config/qutebrowser/gruvbox.py
 
 #nvim
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
