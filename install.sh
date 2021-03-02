@@ -9,7 +9,7 @@ select de in yes no; do
 		yes)
 		echo "Installing i3 and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode rofi qutebrowser ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji ttf-roboto-mono
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode rofi qutebrowser ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji ttf-roboto-mono python-pip
 		
 		echo 'Instaling yay...'
 		mkdir ~/.local
@@ -46,6 +46,13 @@ ln -sfv $path/.Xresources $HOME/.Xresources
 ln -sfv $path/.bashrc $HOME/.bashrc
 ln -sfv $path/.nanorc $HOME/.nanorc
 ln -sfv $path/.gtkrc-2.0 $HOME/.gtkrc-2.0
+
+# If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
+# so it won't get overriden
+if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+
+# Add shell-option to ~/.inputrc to enable case-insensitive tab completion
+echo 'set completion-ignore-case On' >> ~/.inputrc
 
 #Config directory
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
