@@ -39,6 +39,7 @@ alias r='ranger'
 alias drh='source $HOME/envs/drh/bin/activate'
 alias geostat='source $HOME/envs/geostat/bin/activate'
 alias jp='jupyter notebook'
+alias clima='curl wttr.in/~Porto+Alegre'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
@@ -88,8 +89,8 @@ extract () {
 }
 
 senha () {
-
-	cat realpath "$1" | grep -i $2
+	
+	cat "$1" | grep -i $2
 
 }
 

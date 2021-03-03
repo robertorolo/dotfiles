@@ -11,7 +11,7 @@ URxvt*transparent: true
 URxvt*shading: 20
 
 !Manospace
-URxvt.font: xft:Monospace-10
+URxvt.font: xft:Monospace-10,xft:symbola:size=10:minspace=False
 URxvt.letterSpace: 0
 
 !! Common Keybinds for Navigations
