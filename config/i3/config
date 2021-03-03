@@ -196,3 +196,6 @@ bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
 bindsym $mod+p exec pcmanfm
+
+for_window [instance="feh"] floating enable;
+for_window [class="mpv"] floating enable;
