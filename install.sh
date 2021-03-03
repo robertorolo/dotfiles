@@ -87,6 +87,7 @@ ln -sfv $path/config/gtk-3.0/settings.ini $HOME/.config/gtk-3.0/settings.ini
 [ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
 ln -sfv $path/config/qutebrowser/config.py $HOME/.config/qutebrowser/config.py
 ln -sfv $path/config/qutebrowser/gruvbox.py $HOME/.config/qutebrowser/gruvbox.py
+/usr/share/qutebrowser/scripts/dictcli.py install en-US
 
 #nvim
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
