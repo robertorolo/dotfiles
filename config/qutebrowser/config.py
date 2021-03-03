@@ -7,7 +7,8 @@ c.url.start_pages = "https://robertorolo.github.io"
 c.url.searchengines = {"DEFAULT": "https://www.google.com.ar/search?q={}",
                        "wa":"https://wiki.archlinux.org/?search={}",
                        're':'https://www.reddit.com/search?q={}', 
-                       'yt':'https://www.youtube.com/results?search_query={}'}
+                       'yt':'https://www.youtube.com/results?search_query={}',
+                       'gs':'https://scholar.google.com.br/scholar?hl=pt-BR&as_sdt=0%2C5&q={}&btnG=&oq='}
 
 config.source('gruvbox.py')
 

@@ -199,3 +199,5 @@ bindsym $mod+p exec pcmanfm
 
 for_window [instance="feh"] floating enable;
 for_window [class="mpv"] floating enable;
+for_window [instance="pcmanfm"] floating enable;
+for_window [instance="lxappearance"] floating enable;
