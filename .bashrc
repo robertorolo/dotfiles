@@ -87,5 +87,11 @@ extract () {
 	done
 }
 
+senha () {
+
+	cat realpath "$1" | grep -i $2
+
+}
+
 shopt -s cdspell
 shopt -s autocd
