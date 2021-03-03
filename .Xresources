@@ -25,5 +25,3 @@ URxvt.keysym.Control-Left: \033[1;5D
 URxvt.urlLauncher: chromium
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
-
-
