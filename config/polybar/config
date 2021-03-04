@@ -25,7 +25,7 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/mybar]
-modules-right = ibov filesystem wlan1 battery cpu memory xbacklight pulseaudio date
+modules-right = dollar ibov wlan1 battery cpu memory xbacklight pulseaudio date
 modules-left = i3 xwindow 
 module-margin = 0
 
@@ -53,6 +53,11 @@ module-margin-right = 1
 [module/ibov]
 type = custom/script
 exec = ibov.py
+interval = 3600
+
+[module/dollar]
+type = custom/script
+exec = dollar.py
 interval = 3600
 
 [module/date]
