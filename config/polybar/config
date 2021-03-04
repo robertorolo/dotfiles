@@ -25,17 +25,12 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/mybar]
-modules-right = dollar ibov wlan1 battery cpu memory xbacklight pulseaudio date
+modules-right = dollar ibov wlan1 battery cpu memory filesystem xbacklight pulseaudio date
 modules-left = i3 xwindow 
 module-margin = 0
 
 tray-position = right
 tray-padding = 2
-tray-background = ${colors.background}
-tray-offset-x =
-
-background = ${colors.background}
-foreground = ${colors.foreground}
 
 font-0 = monospace:size=10;2
 ;font-0 = sans:size=10;2
@@ -54,21 +49,33 @@ module-margin-right = 1
 type = custom/script
 exec = ibov.py
 interval = 3600
+format-foreground = ${colors.foreground}
 
 [module/dollar]
 type = custom/script
 exec = dollar.py
 interval = 3600
+format-foreground = ${colors.foreground}
 
 [module/date]
 type = internal/date
-interval = 1
-date = %a
-date-alt = %d %a
+
+; Seconds to sleep between updates
+; Default: 1.0
+interval = 1.0
+
+; See "https://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = %Y-%m-%d%
+
+; Optional time format
 time = %H:%M
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt = %A, %d %B %Y
 time-alt = %H:%M:%S
-label = %date% %time%
-;label-background = ${colors.primary}
+format-foreground = ${colors.foreground}
 
 [module/i3]
 type = internal/i3
@@ -82,7 +89,7 @@ ws-icon-4 = 5;五
 ws-icon-5 = 6;六
 
 label-focused = %icon%
-label-focused-background = ${colors.primary}
+label-focused-background = ${colors.secondary}
 label-focused-foreground = ${colors.foreground}
 label-focused-padding = 1
 
@@ -105,24 +112,22 @@ label-empty-foreground = ${colors.foreground}
 ;label-empty-background = ${colors.background}
 label-empty-padding = 1
 
-;label-separator = |
-
 [module/pulseaudio]
 type = internal/pulseaudio
 sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 use-ui-max = true
 interval = 5
-format-volume = VOL <label-volume>
-label-volume = %percentage%%
+format-volume = <label-volume>
+label-volume = VOL %percentage%%
+label-muted = MUTE
 label-volume-foreground = ${colors.foreground}
 format-muted-foreground = ${colors.foreground}
-label-muted = MUTE
+format-foreground = ${colors.foreground}
 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:100:...%
-label-foreground = ${colors.foreground}
-;label-background = ${colors.primary}
+format-foreground = ${colors.foreground}
 
 [module/filesystem]
 type = internal/fs
@@ -130,27 +135,36 @@ interval = 25
 mount-0 = /
 label-mounted = HDD ~/%percentage_used%%
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground}
+label-mounted-foreground = ${colors.foreground}
+label-unmounted-foreground = ${colors.primary}
 
 [module/xbacklight]
 type = internal/xbacklight
 format = <label>
 label = LIGHT %percentage%%
+format-foreground = ${colors.foreground}
 
 [module/wlan1]
 type = internal/network
 interface = wlp3s0
 interval = 1.0
-format-connected = WIFI <ramp-signal>
+format-connected = <label-connected> <ramp-signal>
 format-disconnected = <label-disconnected>
 label-disconnected = DISC
-label-disconnected-foreground = ${colors.foreground-alt3}
+label-connected = WIFI
 ramp-signal-0 = 0%
 ramp-signal-1 = 25%
 ramp-signal-2 = 50%
 ramp-signal-3 = 75%
 ramp-signal-4 = 100%
-;ramp-signal-0-foreground = ${colors.foreground-alt2}
+label-disconnected-foreground = ${colors.primary}
+label-connected-foreground = ${colors.foreground}
+format-foreground = ${colors.foreground}
+ramp-signal-0-foreground = ${colors.foreground}
+ramp-signal-1-foreground = ${colors.foreground}
+ramp-signal-2-foreground = ${colors.foreground}
+ramp-signal-3-foreground = ${colors.foreground}
+ramp-signal-4-foreground = ${colors.foreground}
 
 [module/wlan2]
 type = internal/network
@@ -158,6 +172,7 @@ interface = wlp3s0
 interval = 1.0
 format-connected = <label-connected>
 label-connected = DOWN %downspeed:3%
+;format-foreground = ${colors.foreground}
 
 [module/battery]
 type = internal/battery
@@ -165,14 +180,17 @@ battery = BAT0
 adapter = AC
 full-at = 98
 time-format = %H:%M
+;format-foreground = ${colors.foreground}
 
-format-charging = CHARGING <label-charging>
-format-discharging = DISCHARGING <label-discharging>
-format-full = FULL <label-full>
-label-charging = %percentage%%
-label-discharging = %percentage%% %time%
-label-full = %percentage%%
-label-full-foreground = ${colors.foreground-alt2}
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+format-full = <label-full>
+label-charging = CHAR %percentage%%
+label-discharging = DISC %percentage%% %time%
+label-full = FULL %percentage%%
+label-full-foreground = ${colors.primary}
+label-charging-foreground = ${colors.foreground}
+label-discharging-foreground = ${colors.foreground}
 
 [module/cpu]
 type = internal/cpu
@@ -181,6 +199,7 @@ type = internal/cpu
 interval = 1
 format = <label>
 label = CPU %percentage%%
+format-foreground = ${colors.foreground}
 
 [module/memory]
 type = internal/memory
@@ -189,3 +208,4 @@ type = internal/memory
 interval = 3
 format = <label>
 label = RAM %gb_used%
+format-foreground = ${colors.foreground}
