@@ -15,7 +15,7 @@ sleep 1s && dunst &
 teclado.sh
 touchpadandtrackpoint.sh
 #sh ~/.fehbg
-random_wpp.sh ~/wg/
+[ ! -d ~/wg/ ] && random_wpp.sh ~/wg/
 
 xset r rate 300 50
 
