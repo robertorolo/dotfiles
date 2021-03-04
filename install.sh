@@ -25,8 +25,10 @@ select de in yes no; do
 		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-		cp $path/config/dunst/dunstrc $HOME/.config/wal/templates/dunstrc 
 		wal --theme random_dark
+		cp $path/config/dunst/dunstrc $HOME/.config/wal/templates/dunstrc 
+
+                /usr/share/qutebrowser/scripts/dictcli.py install en-US
 		break
 		;;
 
@@ -82,8 +84,6 @@ ln -sfv $path/config/ranger/rc.conf $HOME/.config/ranger/rc.conf
 #qutebrowser
 [ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
 ln -sfv $path/config/qutebrowser/config.py $HOME/.config/qutebrowser/config.py
-ln -sfv $path/config/qutebrowser/gruvbox.py $HOME/.config/qutebrowser/gruvbox.py
-/usr/share/qutebrowser/scripts/dictcli.py install en-US
 
 #nvim
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
@@ -92,7 +92,6 @@ ln -sfv $path/config/nvim/init.vim $HOME/.config/nvim/init.vim
 #rofi
 [ ! -d $HOME/.config/rofi ] && mkdir $HOME/.config/rofi
 ln -sfv $path/config/rofi/config.rasi $HOME/.config/rofi/config.rasi
-ln -sfv $path/config/rofi/gruvbox-dark-hard.rasi $HOME/.config/rofi/gruvbox-dark-hard.rasi
 
 sudo chmod +x scripts/*
 
