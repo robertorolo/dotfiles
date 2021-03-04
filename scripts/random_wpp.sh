@@ -9,4 +9,4 @@ wal -i "$wlpfile"
 #feh --bg-fill "$wlpfile"
 # Restart dunst with the new color scheme
 pkill dunst
-dunst &
+notify-send 'Random wallpaper set!' 'Do you liked it?'
