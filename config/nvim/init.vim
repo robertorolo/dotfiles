@@ -77,12 +77,14 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
 "Plug 'morhetz/gruvbox'
+Plug 'dylanaraps/wal.vim'
 Plug 'preservim/nerdtree' 
 
 " Initialize plugin system
 call plug#end()
 
 "colorscheme gruvbox
+colorscheme wal
 hi! Normal guibg=NONE ctermbg=NONE
 hi! NonText guibg=NONE ctermbg=NONE
 
