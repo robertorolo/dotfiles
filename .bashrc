@@ -65,6 +65,9 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 
+alias tpoff='xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0'
+alias tpon='xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 1'
+
 # Extracts any archive(s) (if unp isn't installed)
 extract () {
 	for archive in $*; do
