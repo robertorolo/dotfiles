@@ -45,7 +45,6 @@ ln -sfv $path/.xinitrc $HOME/.xinitrc
 ln -sfv $path/.Xresources $HOME/.Xresources
 ln -sfv $path/.bashrc $HOME/.bashrc
 ln -sfv $path/.nanorc $HOME/.nanorc
-ln -sfv $path/.gtkrc-2.0 $HOME/.gtkrc-2.0
 
 # If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
 # so it won't get overriden
@@ -79,10 +78,6 @@ ln -sfv $path/config/dunst/dunstrc $HOME/.config/dunst/dunstrc
 [ ! -d $HOME/.config/ranger ] && mkdir $HOME/.config/ranger
 ln -sfv $path/config/ranger/rc.conf $HOME/.config/ranger/rc.conf
 
-#gtk
-[ ! -d $HOME/.config/gtk-3.0 ] && mkdir $HOME/.config/gtk-3.0
-ln -sfv $path/config/gtk-3.0/settings.ini $HOME/.config/gtk-3.0/settings.ini
-
 #qutebrowser
 [ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
 ln -sfv $path/config/qutebrowser/config.py $HOME/.config/qutebrowser/config.py
@@ -97,12 +92,6 @@ ln -sfv $path/config/nvim/init.vim $HOME/.config/nvim/init.vim
 [ ! -d $HOME/.config/rofi ] && mkdir $HOME/.config/rofi
 ln -sfv $path/config/rofi/config.rasi $HOME/.config/rofi/config.rasi
 ln -sfv $path/config/rofi/gruvbox-dark-hard.rasi $HOME/.config/rofi/gruvbox-dark-hard.rasi
-
-#theme
-cp -r $path/.themes $HOME
-
-#icons
-#cp -r $path/.icons $HOME
 
 sudo chmod +x scripts/*
 
