@@ -8,15 +8,14 @@ unset f
 xrdb ~/.Xresources
 
 # -R restores the last colorscheme that was in use.
-wal -R
-
-sleep 1s && dunst &
+#wal -R
 
 teclado.sh
 touchpadandtrackpoint.sh
 #sh ~/.fehbg
-[ ! -d ~/wg/ ] && random_wpp.sh ~/wg/
-
+[ -d ~/wg/ ] && random_wpp.sh ~/wg/
 xset r rate 300 50
+
+dunst &
 
 exec i3
