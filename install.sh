@@ -25,6 +25,7 @@ select de in yes no; do
 		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
+		cp $path/config/dunst/dunstrc $HOME/.config/wal/templates/dunstrc 
 		wal --theme random_dark
 		break
 		;;
@@ -72,7 +73,7 @@ ln -sfv $path/config/fontconfig/fonts.conf $HOME/.config/fontconfig/fonts.conf
 
 #dunst
 [ ! -d $HOME/.config/dunst ] && mkdir $HOME/.config/dunst
-ln -sfv $path/config/dunst/dunstrc $HOME/.config/dunst/dunstrc
+ln -sfv $HOME/.cache/wal/dunstrc $HOME/.config/dunst/dunstrc
 
 #ranger
 [ ! -d $HOME/.config/ranger ] && mkdir $HOME/.config/ranger
