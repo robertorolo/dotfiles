@@ -15,3 +15,5 @@ c.url.searchengines = {"DEFAULT": "https://www.google.com.ar/search?q={}",
 config.bind('f', 'hint all tab')
 config.bind('F', 'hint')
 config.bind('p', 'spawn mpv {url}')
+
+config.source('qutewal.py')

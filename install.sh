@@ -84,6 +84,7 @@ ln -sfv $path/config/ranger/rc.conf $HOME/.config/ranger/rc.conf
 #qutebrowser
 [ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
 ln -sfv $path/config/qutebrowser/config.py $HOME/.config/qutebrowser/config.py
+ln -sfv $path/config/qutebrowser/qutewal.py $HOME/.config/qutebrowser/qutewal.py
 
 #nvim
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
