@@ -79,6 +79,8 @@ Plug 'itchyny/lightline.vim'
 "Plug 'morhetz/gruvbox'
 Plug 'dylanaraps/wal.vim'
 Plug 'preservim/nerdtree' 
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'jiangmiao/auto-pairs'
 
 " Initialize plugin system
 call plug#end()
@@ -93,3 +95,5 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
 nnoremap <C-n> :NERDTree<CR>
+
+let g:deoplete#enable_at_startup = 1

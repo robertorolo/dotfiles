@@ -3,6 +3,7 @@ c.tabs.background = True
 c.downloads.position = 'bottom'
 c.spellcheck.languages = ['en-US']
 c.url.start_pages = "~/git/robertorolo.github.io/index.html"
+config.set('content.notifications', True, '*://4channel.org')
 
 c.url.searchengines = {"DEFAULT": "https://www.google.com.ar/search?q={}",
                        "wa":"https://wiki.archlinux.org/?search={}",
@@ -17,3 +18,5 @@ config.bind('F', 'hint')
 config.bind('p', 'spawn mpv {url}')
 
 config.source('qutewal.py')
+
+
