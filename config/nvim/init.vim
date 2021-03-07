@@ -81,6 +81,7 @@ Plug 'dylanaraps/wal.vim'
 Plug 'preservim/nerdtree' 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'jiangmiao/auto-pairs'
+Plug 'google/vim-searchindex' 
 
 " Initialize plugin system
 call plug#end()
