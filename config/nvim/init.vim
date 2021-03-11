@@ -38,7 +38,7 @@ nnoremap <space> za
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
-vnoremap <C-P> "+gP
+vnoremap <C-p> "+gP
 
 "split navigations
 nnoremap <C-J> <C-W><C-J>
