@@ -76,7 +76,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
-"Plug 'morhetz/gruvbox'
 Plug 'dylanaraps/wal.vim'
 Plug 'preservim/nerdtree' 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -86,7 +85,6 @@ Plug 'google/vim-searchindex'
 " Initialize plugin system
 call plug#end()
 
-"colorscheme gruvbox
 colorscheme wal
 hi! Normal guibg=NONE ctermbg=NONE
 hi! NonText guibg=NONE ctermbg=NONE
