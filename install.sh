@@ -9,7 +9,7 @@ select de in yes no; do
 		yes)
 		echo "Installing i3 and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode rofi qutebrowser ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji ttf-roboto-mono python-pip xclip xorg-xrdb mpv youtube-dl python-adblock zathura zathura-pdf-mupdf
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rxvt-unicode rofi ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji ttf-roboto-mono python-pip xclip xorg-xrdb mpv youtube-dl python-adblock zathura zathura-pdf-mupdf
 		
 		echo 'Instaling yay...'
 		mkdir ~/.local
@@ -20,15 +20,21 @@ select de in yes no; do
 		makepkg -si
 
 		echo 'Instaling AUR and git programs...'
-		yay -S polybar ttf-roboto otb-uw_ttyp0 sc-im
+		yay -S polybar ttf-roboto otb-uw_ttyp0 sc-im brave
 		
 		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
+		# If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
+		# so it won't get overriden
+		if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+
+		# Add shell-option to ~/.inputrc to enable case-insensitive tab completion
+		echo 'set completion-ignore-case On' >> ~/.inputrc
+
 		wal --theme random_dark
 		cp $path/config/dunst/dunstrc $HOME/.config/wal/templates/dunstrc 
 
-                /usr/share/qutebrowser/scripts/dictcli.py install en-US
 		break
 		;;
 
@@ -48,13 +54,6 @@ ln -sfv $path/.xinitrc $HOME/.xinitrc
 ln -sfv $path/.Xresources $HOME/.Xresources
 ln -sfv $path/.bashrc $HOME/.bashrc
 ln -sfv $path/.nanorc $HOME/.nanorc
-
-# If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
-# so it won't get overriden
-if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
-
-# Add shell-option to ~/.inputrc to enable case-insensitive tab completion
-echo 'set completion-ignore-case On' >> ~/.inputrc
 
 #Config directory
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
@@ -80,11 +79,6 @@ ln -sfv $HOME/.cache/wal/dunstrc $HOME/.config/dunst/dunstrc
 #ranger
 [ ! -d $HOME/.config/ranger ] && mkdir $HOME/.config/ranger
 ln -sfv $path/config/ranger/rc.conf $HOME/.config/ranger/rc.conf
-
-#qutebrowser
-[ ! -d $HOME/.config/qutebrowser ] && mkdir $HOME/.config/qutebrowser
-ln -sfv $path/config/qutebrowser/config.py $HOME/.config/qutebrowser/config.py
-ln -sfv $path/config/qutebrowser/qutewal.py $HOME/.config/qutebrowser/qutewal.py
 
 #nvim
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
