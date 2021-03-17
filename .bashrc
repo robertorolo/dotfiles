@@ -34,6 +34,7 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 alias v='nvim'
 alias g='git'
 alias f='pfetch'
+alias fm='macchina -p -b'
 alias p='sudo pacman'
 alias wg='ranger $HOME/wg '
 alias r='ranger'

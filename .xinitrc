@@ -12,8 +12,10 @@ xrdb ~/.Xresources
 
 teclado.sh
 touchpadandtrackpoint.sh
+
 #sh ~/.fehbg
 [ -d ~/wg/ ] && random_wpp.sh ~/wg/
+
 xset r rate 300 50
 
 dunst &

@@ -180,7 +180,7 @@ label-connected = DOWN %downspeed:3%
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 98
+full-at = 100
 time-format = %H:%M
 ;format-foreground = ${colors.foreground}
 
