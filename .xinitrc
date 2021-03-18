@@ -14,7 +14,7 @@ teclado.sh
 touchpadandtrackpoint.sh
 
 #sh ~/.fehbg
-[ -d ~/wg/ ] && random_wpp.sh ~/wg/
+[ -d ~/wg/ ] && random_wpp.sh $HOME/google_drive/Images/wg
 
 xset r rate 300 50
 
