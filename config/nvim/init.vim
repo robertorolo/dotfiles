@@ -28,6 +28,7 @@ set ignorecase
 set incsearch
 set autoindent
 set encoding=utf-8
+set spell spelllang=pt_br
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
