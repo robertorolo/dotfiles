@@ -41,8 +41,8 @@ alias r='ranger'
 alias tsm='transmission-remote'
 alias rw='random_wpp.sh $HOME/google_drive/Images/wg'
 alias rt='wal --theme random_dark && cp ~/.cache/wal/colors-konsole.colorscheme ~/.local/share/konsole/colors-konsole.colorscheme'
-alias drh='source $HOME/envs/drh/bin/activate'
-alias geostat='source $HOME/envs/geostat/bin/activate'
+alias drh='conda activate drh'
+alias geostat='conda activate geostat'
 alias jp='jupyter notebook'
 alias clima='curl wttr.in/~Porto+Alegre'
 alias diff='diff --color=auto'
@@ -104,3 +104,19 @@ senha () {
 
 shopt -s cdspell
 shopt -s autocd
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/void/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/void/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/void/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/void/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
