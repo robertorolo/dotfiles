@@ -82,6 +82,7 @@ Plug 'preservim/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'google/vim-searchindex' 
+Plug 'chrisbra/Colorizer'
 
 " Initialize plugin system
 call plug#end()
