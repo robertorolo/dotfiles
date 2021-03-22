@@ -33,7 +33,6 @@ select de in yes no; do
 		echo 'set completion-ignore-case On' >> ~/.inputrc
 
 		wal --theme random_dark
-		cp $path/config/dunst/dunstrc $HOME/.config/wal/templates/dunstrc 
 
 		break
 		;;
@@ -73,8 +72,9 @@ ln -sfv $path/config/polybar/config $HOME/.config/polybar/config
 ln -sfv $path/config/fontconfig/fonts.conf $HOME/.config/fontconfig/fonts.conf
 
 #dunst
-[ ! -d $HOME/.config/dunst ] && mkdir $HOME/.config/dunst
-ln -sfv $HOME/.cache/wal/dunstrc $HOME/.config/dunst/dunstrc
+#[ ! -d $HOME/.config/dunst ] && mkdir $HOME/.config/dunst
+#ln -sfv $HOME/.cache/wal/dunstrc $HOME/.config/dunst/dunstrc
+cp $path/config/dunst/dunstrc $HOME/.config/wal/templates/dunstrc 
 
 #ranger
 [ ! -d $HOME/.config/ranger ] && mkdir $HOME/.config/ranger
