@@ -20,4 +20,6 @@ xset r rate 300 50
 
 dunst &
 
+picom &
+
 exec i3
