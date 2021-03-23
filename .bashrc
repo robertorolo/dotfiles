@@ -19,6 +19,9 @@ PS1="\[\e[00;34m\]λ \W \[\e[0m\]"
 # Alternative (blocks terminal for 0-3ms)
 cat ~/.cache/wal/sequences
 
+#vi mode
+set -o vi
+
 export PATH=~/dotfiles/scripts:$PATH
 export PF_INFO="title os host kernel uptime pkgs wm shell palette"
 
