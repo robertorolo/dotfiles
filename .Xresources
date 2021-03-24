@@ -4,12 +4,6 @@
 URxvt.scrollBar: False
 URxvt.internalBorder:  10
 
-! Transparency
-!URxvt*inheritPixmap: true
-!URxvt*transparent: true
-! URxvt*shading: 0 to 99 darkens, 101 to 200 lightens
-!URxvt*shading: 10
-
 !Manospace
 URxvt.font: xft:Monospace-10,xft:symbola:size=10:minspace=False
 URxvt.letterSpace: 0
