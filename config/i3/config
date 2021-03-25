@@ -58,6 +58,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec alacritty
 
 #print screen
 bindsym Print exec scrot && notify-send "You took a screenshot!" "Now go share on /g/!"  

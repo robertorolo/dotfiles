@@ -88,6 +88,10 @@ ln -sfv $path/config/nvim/init.vim $HOME/.config/nvim/init.vim
 [ ! -d $HOME/.config/rofi ] && mkdir $HOME/.config/rofi
 ln -sfv $path/config/rofi/config.rasi $HOME/.config/rofi/config.rasi
 
+#alacritty
+[ ! -d $HOME/.config/alacritty ] && mkdir $HOME/.config/alacritty
+ln -sfv $path/config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+
 sudo chmod +x scripts/*
 
 xdg-mime default feh.desktop image/jpeg
