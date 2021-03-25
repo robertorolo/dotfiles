@@ -29,7 +29,8 @@ export EDITOR=nvim;
 export VISUAL=nvim;
 #export BROWSER=qutebrowser;
 export BROWSER=brave;
-export TERMINAL=urxvt;
+#export TERMINAL=urxvt;
+export TERMINAL=alacritty;
 export READER=zathura;
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi

@@ -57,8 +57,8 @@ gaps outer 0
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec alacritty
+bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec urxvt
 
 #print screen
 bindsym Print exec scrot && notify-send "You took a screenshot!" "Now go share on /g/!"  
