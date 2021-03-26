@@ -1,0 +1,10 @@
+#!/bin/sh
+while read file
+do
+        case "$1" in
+        "p")
+		wal -i "$file" ;;
+	"b")
+		feh --bg-fill "$file" ;;
+        esac
+done
