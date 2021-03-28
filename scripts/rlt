@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wal --theme random_light && killall dunst && notify-send "random light theme applied!"

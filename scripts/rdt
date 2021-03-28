@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wal --theme random_dark && killall dunst && notify-send "random dark theme applied!"
