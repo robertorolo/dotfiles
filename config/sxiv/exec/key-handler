@@ -3,7 +3,7 @@ while read file
 do
         case "$1" in
         "p")
-		wal -i "$file" ;;
+		wal -i "$file" && killall dunst && notify-send "Do you liked your new pywal generated scheme?";;
 	"b")
 		feh --bg-fill "$file" ;;
         esac
