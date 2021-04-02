@@ -13,7 +13,8 @@ import requests
 def get_dollar():
     val = convert('usd', 'brl', 1)
     dol = val.split('"')[11]
-    return 'USD '+dol
+    #return 'USD '+dol
+    return ' '+dol
 
 url = "http://www.google.com"
 timetout = 5
