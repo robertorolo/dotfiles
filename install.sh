@@ -96,6 +96,10 @@ ln -sfv $path/config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.y
 [ ! -d $HOME/.config/sxiv/exec ] && mkdir $HOME/.config/sxiv && mkdir $HOME/.config/sxiv/exec
 ln -sfv $path/config/sxiv/exec/key-handler $HOME/.config/sxiv/exec/key-handler
 
+#picom
+[ ! -d $HOME/.config/picom ] && mkdir $HOME/.config/picom
+ln -sfv $path/config/picom/picom.conf $HOME/.config/picom/picom.conf
+
 sudo chmod +x scripts/*
 
 xdg-mime default feh.desktop image/jpeg

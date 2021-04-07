@@ -32,7 +32,7 @@ client.background       $bg
 #bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 bindsym $mod+d exec --no-startup-id rofi -show run 
 
-for_window [class="^.*"] border pixel 2 
+for_window [class="^.*"] border pixel 0 
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -110,9 +110,11 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-#bindsym $mod+w layout tabbed
-bindsym $mod+w exec brave 
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
+
+# browser
+bindsym $mod+w exec brave 
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
