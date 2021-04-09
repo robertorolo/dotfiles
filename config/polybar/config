@@ -25,6 +25,7 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/mybar]
+monitor = LVDS1
 modules-right = dollar ibov battery wlan1 cpu memory  xbacklight pulseaudio date
 modules-left = i3 xwindow 
 module-margin = 0
@@ -49,6 +50,31 @@ module-margin-right = 1
 background = ${colors.background}
 foreground = ${colors.foreground}
 
+[bar/mybar1]
+monitor = HDMI1
+modules-right = date
+modules-left = i3 xwindow 
+module-margin = 0
+
+tray-position = right
+tray-padding = 2
+
+font-0 = monospace:size=10;2
+;font-0 = sans:size=10;2
+font-1 = FontAwesome:size=10;2
+font-2 = IPAPGothic:size=10;2
+font-3 = IPAPMincho:size10;2
+font-4 = "icomoon\-feather:size=10;2"
+
+height = 23
+border-size = 0 
+padding-left = 0
+padding-right = 0
+module-margin-left = 1
+module-margin-right = 1
+
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 [module/ibov]
 type = custom/script
@@ -87,6 +113,7 @@ label = %time% %date%
 [module/i3]
 type = internal/i3
 fuzzy-match = false
+pin-workspaces = true
 
 ws-icon-0 = 1;一
 ws-icon-1 = 2;二
@@ -94,6 +121,13 @@ ws-icon-2 = 3;三
 ws-icon-3 = 4;四
 ws-icon-4 = 5;五
 ws-icon-5 = 6;六
+ws-icon-6 = 7;七
+ws-icon-7 = 8;八
+ws-icon-8 = 9;九
+ws-icon-9 = 10;十
+
+label-visible = %icon%
+label-visible-padding = 1 
 
 label-focused = %icon%
 label-focused-background = ${colors.foreground-alt}
