@@ -4,10 +4,9 @@ intern="LVDS1"
 extern="HDMI1"
 
 case "$1" in
-	"disconect") xrandr --output "$extern" --off --output "$intern" --auto ;;
-#	"duplicate") xrandr --output "$extern" --set audio force-dvi --mode 1920x1080 && xrandr --output "$intern" --auto --output "$extern" --same-as "$intern" ;;
+	"disconect") xrandr --output "$extern" --off --output "$intern" --auto && sh ~/.config/polybar/launch.sh ;;
 	"duplicate") xrandr --output "$intern" --mode 1366x768 --scale 1x1 --output "$extern" --same-as "$intern" --mode 1920x1080 --scale 0.711x0.711 ;;
-	"extend") xrandr --output "$extern" --set audio force-dvi --mode 1920x1080 && xrandr --output "$intern" --auto --output "$extern" --right-of "$intern" ;;  
+	"extend") xrandr --output "$extern" --set audio force-dvi --mode 1920x1080 && xrandr --output "$intern" --auto --output "$extern" --right-of "$intern" && sh ~/.fehbg && sh ~/.config/polybar/launch.sh ;;  
 	*) notify-send "Unknow operation!" ;;
 esac
 

@@ -29,6 +29,7 @@ set incsearch
 set autoindent
 set encoding=utf-8
 set spelllang=pt_br
+set nobackup
 
 " Enable folding
 set foldmethod=indent

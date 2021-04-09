@@ -20,7 +20,7 @@ select de in yes no; do
 		makepkg -si
 
 		echo 'Instaling AUR and git programs...'
-		yay -S polybar ttf-roboto otb-uw_ttyp0 sc-im brave ttf-icomoon-feather
+		yay -S polybar ttf-roboto otb-uw_ttyp0 sc-im brave ttf-icomoon-feather ttf-iosevka
 		
 		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
