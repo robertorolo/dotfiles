@@ -9,7 +9,10 @@ select de in yes no; do
 		yes)
 		echo "Installing i3 and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rofi ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji ttf-roboto-mono python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf transmission-cli picom alacritty rxvt-unicode sxiv
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rofi ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji ttf-roboto-mono python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf transmission-cli picom alacritty rxvt-unicode sxiv tlp
+
+		sudo enable tlp.service
+		sudo start tlp.service
 		
 		echo 'Instaling yay...'
 		mkdir ~/.local
@@ -53,6 +56,7 @@ ln -sfv $path/.xinitrc $HOME/.xinitrc
 ln -sfv $path/.Xresources $HOME/.Xresources
 ln -sfv $path/.bashrc $HOME/.bashrc
 ln -sfv $path/.nanorc $HOME/.nanorc
+sudo ln -sfv $path/tlp.conf /etc/tlp.conf 
 
 #Config directory
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
