@@ -42,9 +42,7 @@ alias fm='macchina  -b --no-ascii --no-box'
 alias p='sudo pacman'
 alias r='ranger'
 alias tsm='transmission-remote'
-alias rw='random_wpp.sh $HOME/google_drive/Images/wg'
-alias rdt='wal --theme random_dark && killall dunst && notify-send "random dark theme applied!"'
-alias rlt='wal --theme random_light && killall dunst && notify-send "random light theme applied!"'
+alias y='youtube-dl'
 alias drh='conda activate drh'
 alias geostat='conda activate geostat'
 alias jp='jupyter notebook'
@@ -72,9 +70,6 @@ alias ungz='tar -xvzf'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
-
-alias tpoff='xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0 && notify-send "Trackpad off"'
-alias tpon='xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 1 && notify-send "Trackpad on"'
 
 # Extracts any archive(s) (if unp isn't installed)
 extract () {

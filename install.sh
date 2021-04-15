@@ -104,6 +104,10 @@ ln -sfv $path/config/sxiv/exec/key-handler $HOME/.config/sxiv/exec/key-handler
 [ ! -d $HOME/.config/picom ] && mkdir $HOME/.config/picom
 ln -sfv $path/config/picom/picom.conf $HOME/.config/picom/picom.conf
 
+#zathura
+[ ! -d $HOME/.config/zathura ] && mkdir $HOME/.config/zathura
+ln -sfv $path/config/zathura/zathurarc $HOME/.config/zathura/zathurarc
+
 sudo chmod +x scripts/*
 
 xdg-mime default feh.desktop image/jpeg
