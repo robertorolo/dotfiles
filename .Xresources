@@ -2,10 +2,10 @@
 
 ! General settings
 URxvt.scrollBar: False
-URxvt.internalBorder:  10
+URxvt.internalBorder:  8
 
 !Manospace
-URxvt.font: xft:Monospace-10,xft:symbola:size=10:minspace=False
+URxvt.font: xft:Monospace-12,xft:symbola:size=12:minspace=False
 URxvt.letterSpace: 0
 
 !! Common Keybinds for Navigations

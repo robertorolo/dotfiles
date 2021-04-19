@@ -9,7 +9,7 @@ select de in yes no; do
 		yes)
 		echo "Installing i3 and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rofi ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot w3m xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji ttf-roboto-mono python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf transmission-cli picom alacritty rxvt-unicode sxiv tlp tp_smapi acpi_call
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rofi ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot ueberzug xorg-xinput pcmanfm neovim xsel lxappearance otf-ipafont noto-fonts-emoji ttf-roboto-mono python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf transmission-cli picom alacritty rxvt-unicode sxiv tlp tp_smapi acpi_call
 
 		sudo enable tlp.service
 		sudo start tlp.service
