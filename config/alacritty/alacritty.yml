@@ -681,9 +681,11 @@ cursor:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
+ 
+ - { key: L, mods: Control, chars: "\x0c" }
  - { key: V,        mods: Command,       action: Paste                        }
  - { key: C,        mods: Command,       action: Copy                         }
- - { key: L,         mods: Control,                    action: ClearLogNotice }
+   #- { key: L,         mods: Control,                    action: ClearLogNotice }
   #- { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"          }
   #- { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp,  }
   #- { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown }
@@ -759,11 +761,11 @@ key_bindings:
   #- { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }
   #- { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
   #- { key: Insert,         mods: Shift,                           action: PasteSelection   }
-  #- { key: Key0,           mods: Control,                         action: ResetFontSize    }
+ - { key: Key0,           mods: Control,                         action: ResetFontSize    }
   #- { key: Equals,         mods: Control,                         action: IncreaseFontSize }
-  #- { key: Plus,           mods: Control,                         action: IncreaseFontSize }
+ - { key: Plus,           mods: Control,                         action: IncreaseFontSize }
   #- { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
-  #- { key: Minus,          mods: Control,                         action: DecreaseFontSize }
+ - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
   #- { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
 
   # (Windows only)

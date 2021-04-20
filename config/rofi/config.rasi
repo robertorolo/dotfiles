@@ -1,5 +1,5 @@
 configuration {
-font: "Monospace 10";
+font: "Monospace 12";
 theme: "~/.cache/wal/colors-rofi-dark";
 }
 
