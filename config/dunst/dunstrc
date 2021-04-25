@@ -20,7 +20,7 @@
     idle_threshold = 120
 
     # Font and typography settings
-    font = Monospace 12 
+    font = Monospace 10 
     alignment = center
     word_wrap = yes
 
