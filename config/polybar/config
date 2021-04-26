@@ -26,7 +26,7 @@ alert = ${xrdb:color3:#222}
 
 [bar/mybar]
 monitor = LVDS1
-modules-right = dollar ibov battery wlan1 cpu memory  xbacklight pulseaudio date
+modules-right = dollar btc ibov battery wlan1 cpu memory  xbacklight pulseaudio date
 modules-left = i3 xwindow 
 module-margin = 0
 
@@ -73,6 +73,12 @@ foreground = ${colors.foreground}
 [module/ibov]
 type = custom/script
 exec = ibov.py
+interval = 3600
+format-foreground = ${colors.foreground}
+
+[module/btc]
+type = custom/script
+exec = bitcoin.py
 interval = 3600
 format-foreground = ${colors.foreground}
 
