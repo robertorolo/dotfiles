@@ -230,7 +230,7 @@ label-connected = DOWN %downspeed:3%
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 100
+full-at = 88
 time-format = %H:%M
 ;format-foreground = ${colors.foreground}
 
@@ -239,7 +239,7 @@ format-discharging = <label-discharging>
 format-full = <label-full>
 label-charging = CHAR %percentage%%
 label-discharging = DISC %percentage%% %time%
-label-full = FULL %percentage%%
+label-full = FULL
 label-full-foreground = ${colors.primary}
 label-charging-foreground = ${colors.foreground}
 label-discharging-foreground = ${colors.foreground}
