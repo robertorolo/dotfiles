@@ -82,10 +82,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'preservim/nerdtree' 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'google/vim-searchindex' 
-Plug 'chrisbra/Colorizer'
+" Plug 'chrisbra/Colorizer'
 
 " Initialize plugin system
 call plug#end()
