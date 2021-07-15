@@ -1,0 +1,12 @@
+#!/bin/sh
+
+API="https://api.kraken.com/0/public/Ticker"
+
+btc=$(curl -sf $API?pair=BTCUSD | jq -r ".result.XXBTZUSD.c[0]")
+eth=$(curl -sf $API?pair=ETHUSD | jq -r ".result.XETHZUSD.c[0]")
+xmr=$(curl -sf $API?pair=XMRUSD | jq -r ".result.XXMRZUSD.c[0]")
+ada=$(curl -sf $API?pair=ADAUSD | jq -r ".result.ADAUSD.c[0]")
+
+summary=$(LANG=C printf "BTC $%.2f\nETH $%.2f\nXMR $%.2f\nADA $%.2f" "$btc" "$eth" "$xmr" $ada)
+
+notify-send -t 15000 "$summary"
