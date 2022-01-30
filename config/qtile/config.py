@@ -24,6 +24,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import os
+
 from typing import List  # noqa: F401
 
 from libqtile import bar, layout, widget
@@ -122,8 +124,9 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(margin=5, border_width=2, border_focus=colors[1], border_normal=colors[0]),
-    #layout.Max(),
+    layout.MonadTall(margin=5, border_width=2, border_focus=colors[1], border_normal=colors[0]),
+    layout.Floating(border_width=2, border_focus=colors[1], border_normal=colors[0]),
+    layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -149,6 +152,8 @@ screens = [
     Screen(
         top=bar.Bar(
             [
+                #widget.CurrentLayoutIcon(custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")]),
+                widget.CurrentLayout(),
                 widget.GroupBox(
                     rounded=False, 
                     hide_unused=True,
@@ -189,7 +194,7 @@ dgroups_app_rules = []  # type: List
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating(
+floating_layout = layout.Floating(border_width=2, border_focus=colors[1], border_normal=colors[0],
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
