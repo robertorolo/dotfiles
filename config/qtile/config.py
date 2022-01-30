@@ -48,7 +48,13 @@ terminal = guess_terminal()
 keys = [
     #programs
     Key([mod], "w", lazy.spawn("qutebrowser"), desc="launches browser"), 
-    Key([mod], "r", lazy.spawn("kitty -e ranger"), desc="launches ranger"), 
+    Key([mod], "r", lazy.spawn("kitty -e ranger_pw"), desc="launches ranger"), 
+    #volume keys
+    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
+    #screenshot
+    Key([], "Print", lazy.spawn('scrot ss/telatiro-"$%y%m%d-%H%M-%S.png" && notify-send "Tela tiro!"')),
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
@@ -143,14 +149,21 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(rounded=False, hide_unused=True,
-                    inactive=colors[1], this_current_screen_border=colors[4],
-                    this_screen_border=colors[5], active=colors[3]),
+                widget.GroupBox(
+                    rounded=False, 
+                    hide_unused=True,
+                    inactive=colors[3], 
+                    active=colors[3],
+                    highlight_method="block", 
+                    urgent_border=colors[6]),
                 widget.Prompt(font="monospace"),
                 widget.WindowName(),
                 widget.Chord(),
+                widget.StockTicker(apikey='JF1MDSLZBVESXHRH', symbol="VT"),
+                #widget.StockTicker(apikey='JF1MDSLZBVESXHRH', function="DIGITAL_CURRENCY_INTRADAY", symbol="BTC", market="USD"),
+                widget.CryptoTicker(),
                 widget.TextBox(text="BAT"),
-                widget.Battery(),
+                widget.Battery(format='{char} {percent:2.0%} {hour:d}:{min:02d}'),
                 widget.TextBox(text="BL"),
                 widget.Backlight(),
                 widget.TextBox(text="VOL"),

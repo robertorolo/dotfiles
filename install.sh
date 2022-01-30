@@ -7,13 +7,10 @@ select de in yes no; do
 	case $de in
 		
 		yes)
-		echo "Installing i3 and some of your system dependencies..."
+		echo "Installing qtile and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel i3-gaps rofi ranger alsa-utils pulseaudio feh python-pywal xorg-xbacklight dunst libnotify scrot ueberzug xorg-xinput pcmanfm neovim xsel lxappearance noto-fonts-emoji python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf transmission-cli picom alacritty rxvt-unicode sxiv tlp tp_smapi acpi_call
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel qtile ranger alsa-utils pulseaudio feh python-pywal brightnessctl dunst libnotify scrot ueberzug xorg-xinput neovim xsel lxappearance python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf transmission-cli picom kitty sxiv
 
-		sudo enable tlp.service
-		sudo start tlp.service
-		
 		echo 'Instaling yay...'
 		mkdir ~/.local
 		mkdir ~/.local/src
@@ -23,9 +20,9 @@ select de in yes no; do
 		makepkg -si
 
 		echo 'Instaling AUR and git programs...'
-		yay -S polybar ttf-roboto sc-im brave-bin terminus-font
+		yay -S ttf-roboto ner-fonts-jetbrains-mono 
 		
-		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \t
        		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 		# If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
