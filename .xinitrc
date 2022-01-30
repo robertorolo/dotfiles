@@ -5,7 +5,7 @@ for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
 done
 unset f
 
-xrdb ~/.Xresources
+#xrdb ~/.Xresources
 
 # -R restores the last colorscheme that was in use.
 wal -R
@@ -22,4 +22,5 @@ dunst &
 
 picom &
 
-exec i3
+#exec i3
+exec qtile start

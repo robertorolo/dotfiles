@@ -65,6 +65,10 @@ sudo ln -sfv $path/tlp.conf /etc/tlp.conf
 [ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3
 ln -sfv $path/config/i3/config $HOME/.config/i3/config
 
+#qtile
+[ ! -d $HOME/.config/qtile ] && mkdir $HOME/.config/qtile
+ln -sfv $path/config/qtile/config.py $HOME/.config/qtile/config.py
+
 #polybar
 [ ! -d $HOME/.config/polybar ] && mkdir $HOME/.config/polybar
 sudo chmod -v +x $path/config/polybar/launch.sh
@@ -95,6 +99,10 @@ ln -sfv $path/config/rofi/config.rasi $HOME/.config/rofi/config.rasi
 #alacritty
 [ ! -d $HOME/.config/alacritty ] && mkdir $HOME/.config/alacritty
 ln -sfv $path/config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+
+#kitty
+[ ! -d $HOME/.config/kitty ] && mkdir $HOME/.config/kitty
+ln -sfv $path/config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 
 #sxiv
 [ ! -d $HOME/.config/sxiv/exec ] && mkdir $HOME/.config/sxiv && mkdir $HOME/.config/sxiv/exec

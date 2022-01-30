@@ -24,15 +24,15 @@ cat ~/.cache/wal/sequences
 #vi mode
 set -o vi
 
-export PATH=~/dotfiles/scripts:$PATH
+export PATH=~/git/dotfiles/scripts:$PATH
 export PF_INFO="title os host kernel uptime pkgs wm shell palette"
 
 export EDITOR=nvim;
 export VISUAL=nvim;
-#export BROWSER=qutebrowser;
-export BROWSER=brave;
+export BROWSER=qutebrowser;
+#export BROWSER=brave;
 #export TERMINAL=urxvt;
-export TERMINAL=alacritty;
+export TERMINAL=kitty;
 export READER=zathura;
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
@@ -122,3 +122,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION
