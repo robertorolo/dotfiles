@@ -10,11 +10,11 @@ unset f
 # -R restores the last colorscheme that was in use.
 wal -R
 
-teclado.sh
-touchpadandtrackpoint.sh
+teclado
+touchpadandtrackpoint
 
 sh ~/.fehbg
-#[ -d ~/wg/ ] && random_wpp.sh $HOME/google_drive/Images/wg
+#[ -d ~/wg/ ] && random_wpp $~/wg
 
 xset r rate 300 50
 

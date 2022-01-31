@@ -30,14 +30,15 @@ set autoindent
 set encoding=utf-8
 set spelllang=pt_br
 set nobackup
+set number relativenumber
 
-" Enable folding
+"Enable folding
 set foldmethod=indent
 set foldlevel=99
-" Enable folding with the spacebar
+"Enable folding with the spacebar
 nnoremap <space> za
 
-" copy and paste
+"copy and paste
 vnoremap <C-c> "+y
 map <C-v> "+P
 map <C-s> :w<cr>
@@ -57,20 +58,20 @@ nnoremap <C-H> <C-W><C-H>
 "    \ set autoindent |
 "    \ set fileformat=unix
 
-" plugins
+"plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Install vim-plug if not found
+"Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
-" Run PlugInstall if there are missing plugins
+"Run PlugInstall if there are missing plugins
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
@@ -83,18 +84,19 @@ Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'google/vim-searchindex' 
 
-" Initialize plugin system
+"Initialize plugin system
 call plug#end()
 
+"colorscheme
 colorscheme wal
 hi! Normal guibg=NONE ctermbg=NONE
 hi! NonText guibg=NONE ctermbg=NONE
 
-" Start NERDTree when Vim is started without file arguments.
+let g:lightline = {'colorscheme':'wal'}
+
+"Start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
 nnoremap <C-n> :NERDTree<CR>
 let NERDTreeShowHidden=1
-
-let g:deoplete#enable_at_startup = 1
