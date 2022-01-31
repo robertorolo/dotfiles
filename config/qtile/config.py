@@ -153,14 +153,16 @@ screens = [
         top=bar.Bar(
             [
                 #widget.CurrentLayoutIcon(custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")]),
-                widget.CurrentLayout(),
+                #widget.CurrentLayout(),
                 widget.GroupBox(
                     rounded=False, 
                     hide_unused=True,
                     inactive=colors[3], 
-                    active=colors[3],
+                    active=colors[7],
                     highlight_method="block", 
-                    urgent_border=colors[6]),
+                    urgent_border=colors[6],
+                    this_current_screen_border=colors[5],
+                    ),
                 widget.Prompt(font="monospace"),
                 widget.WindowName(),
                 widget.Chord(),
