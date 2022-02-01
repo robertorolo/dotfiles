@@ -24,8 +24,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import os
-
 from typing import List  # noqa: F401
 
 from libqtile import bar, layout, widget
@@ -154,6 +152,7 @@ screens = [
             [
                 #widget.CurrentLayoutIcon(custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")]),
                 #widget.CurrentLayout(),
+                widget.Prompt(font="monospace", cursor_color=colors[3]),
                 widget.GroupBox(
                     rounded=False, 
                     hide_unused=True,
@@ -163,21 +162,25 @@ screens = [
                     urgent_border=colors[2],
                     this_current_screen_border=colors[1],
                     ),
-                widget.Prompt(font="monospace"),
-                widget.WindowName(max_chars=60),
-                widget.Chord(),
+                widget.WindowName(max_chars=60, format='{name}'),
                 widget.TextBox(text=" "),
-                widget.StockTicker(apikey='JF1MDSLZBVESXHRH', symbol="VT", update_interval=1800),
-                widget.CryptoTicker(),
-                widget.TextBox(text=" "),
-                widget.Battery(format='{char} {percent:2.0%} {hour:d}:{min:02d}', low_foreground=colors[1], charge_char='', discharge_char='', full_char=''),
+                #widget.StockTicker(apikey='JF1MDSLZBVESXHRH', symbol="VT", update_interval=1800),
+                widget.CryptoTicker(crypto='BTC', format='{crypto}:{amount:.2f} '),
+                widget.CryptoTicker(crypto='ETH', format='{crypto}:{amount:.2f}'),
+                widget.TextBox(text=" "),
+                widget.TextBox(text=""),
+                widget.Battery(format='{char} {percent:2.0%} {hour:d}:{min:02d}', low_foreground=colors[1], charge_char='', discharge_char='', full_char='f'),
+                widget.TextBox(text=" "),
                 widget.TextBox(text=" "),
                 widget.Backlight(),
+                widget.TextBox(text=" "),
                 widget.TextBox(text=" "),
                 widget.Volume(),
+                widget.TextBox(text=" "),
                 widget.TextBox(text=" "),
                 widget.Wlan(interface="wlp3s0"),
-                widget.Clock(format="%Y/%m/%d %I:%M %p", foreground=colors[1]),
+                widget.TextBox(text=" "),
+                widget.Clock(format="%Y/%m/%d %H:%M", foreground=colors[1]),
             ],
             24,
             background=colors[0],
