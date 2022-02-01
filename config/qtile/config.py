@@ -49,7 +49,7 @@ terminal = guess_terminal()
 
 keys = [
     #programs
-    Key([mod], "w", lazy.spawn("qutebrowser"), desc="launches browser"), 
+    Key([mod], "w", lazy.spawn("firefox"), desc="launches browser"), 
     Key([mod], "r", lazy.spawn("kitty -e ranger_pw"), desc="launches ranger"), 
     #volume keys
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
@@ -166,15 +166,15 @@ screens = [
                 widget.Prompt(font="monospace"),
                 widget.WindowName(),
                 widget.Chord(),
-                widget.StockTicker(apikey='JF1MDSLZBVESXHRH', symbol="VT", update_interval=600),
+                widget.StockTicker(apikey='JF1MDSLZBVESXHRH', symbol="VT", update_interval=1800),
                 widget.CryptoTicker(),
                 widget.TextBox(text="BAT:"),
-                widget.Battery(format='{char} {percent:2.0%} {hour:d}:{min:02d}', low_foreground=colors[1]),
+                widget.Battery(format='{char} {percent:2.0%} {hour:d}:{min:02d}', low_foreground=colors[1], charge_char='c', discharge_char='d'),
                 widget.TextBox(text="BL:"),
                 widget.Backlight(),
                 widget.TextBox(text="VOL:"),
                 widget.Volume(),
-                widget.TextBox(text="NET:"),
+                widget.TextBox(text="WLAN:"),
                 widget.Wlan(interface="wlp3s0"),
                 widget.Clock(format="%Y/%m/%d %I:%M %p", foreground=colors[1]),
             ],

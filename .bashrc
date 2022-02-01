@@ -29,8 +29,8 @@ export PF_INFO="title os host kernel uptime pkgs wm shell palette"
 
 export EDITOR=nvim;
 export VISUAL=nvim;
-export BROWSER=qutebrowser;
-#export BROWSER=brave;
+#export BROWSER=qutebrowser;
+export BROWSER=firefox;
 #export TERMINAL=urxvt;
 export TERMINAL=kitty;
 export READER=zathura;
