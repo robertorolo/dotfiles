@@ -164,7 +164,7 @@ screens = [
                     this_current_screen_border=colors[1],
                     ),
                 widget.Prompt(font="monospace"),
-                widget.WindowName(),
+                widget.WindowName(max_chars=60),
                 widget.Chord(),
                 widget.StockTicker(apikey='JF1MDSLZBVESXHRH', symbol="VT", update_interval=1800),
                 widget.CryptoTicker(),
