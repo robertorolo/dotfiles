@@ -9,7 +9,7 @@ select de in yes no; do
 		yes)
 		echo "Installing qtile and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel qtile ranger alsa-utils pulseaudio feh python-pywal brightnessctl dunst libnotify scrot ueberzug xorg-xinput neovim xsel lxappearance python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf transmission-cli picom kitty sxiv
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel qtile ranger alsa-utils pulseaudio feh python-pywal brightnessctl dunst libnotify scrot ueberzug xorg-xinput neovim xsel lxappearance python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf transmission-cli picom kitty sxiv ttf-font-awesome
 
 		echo 'Instaling yay...'
 		mkdir ~/.local
@@ -20,7 +20,7 @@ select de in yes no; do
 		makepkg -si
 
 		echo 'Instaling AUR and git programs...'
-		yay -S ttf-roboto ner-fonts-jetbrains-mono 
+		yay -S ttf-roboto nerd-fonts-jetbrains-mono 
 		
 		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \t
        		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
