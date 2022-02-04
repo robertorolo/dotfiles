@@ -9,7 +9,7 @@ select de in yes no; do
 		yes)
 		echo "Installing qtile and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel qtile ranger alsa-utils pulseaudio feh python-pywal brightnessctl dunst libnotify scrot ueberzug xorg-xinput neovim xsel lxappearance python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf picom kitty sxiv ttf-font-awesome
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel qtile ranger alsa-utils pulseaudio feh python-pywal brightnessctl dunst libnotify scrot ueberzug xorg-xinput neovim xsel lxappearance python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf picom kitty sxiv ttf-font-awesome python-iwlib 
 
 		echo 'Instaling yay...'
 		mkdir ~/.local
