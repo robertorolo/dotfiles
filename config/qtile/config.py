@@ -164,7 +164,6 @@ screens = [
                     ),
                 widget.WindowName(max_chars=60, format='{name}'),
                 widget.TextBox(text=" "),
-                #widget.StockTicker(apikey='JF1MDSLZBVESXHRH', symbol="VT", update_interval=1800),
                 widget.CryptoTicker(crypto='BTC', format='{crypto}:{amount:.2f} '),
                 widget.CryptoTicker(crypto='ETH', format='{crypto}:{amount:.2f}'),
                 widget.TextBox(text=" "),

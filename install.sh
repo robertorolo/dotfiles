@@ -9,7 +9,7 @@ select de in yes no; do
 		yes)
 		echo "Installing qtile and some of your system dependencies..."
 		sudo pacman -Syuu
-		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel qtile ranger alsa-utils pulseaudio feh python-pywal brightnessctl dunst libnotify scrot ueberzug xorg-xinput neovim xsel lxappearance python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf transmission-cli picom kitty sxiv ttf-font-awesome
+		sudo pacman -S base-devel xorg-server xorg-xinit xorg-xrdb xf86-video-intel qtile ranger alsa-utils pulseaudio feh python-pywal brightnessctl dunst libnotify scrot ueberzug xorg-xinput neovim xsel lxappearance python-pip xclip mpv youtube-dl zathura zathura-pdf-mupdf picom kitty sxiv ttf-font-awesome
 
 		echo 'Instaling yay...'
 		mkdir ~/.local
@@ -21,7 +21,8 @@ select de in yes no; do
 
 		echo 'Instaling AUR and git programs...'
 		yay -S ttf-roboto nerd-fonts-jetbrains-mono 
-		
+	
+		#Installing Plug for vim
 		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \t
        		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
@@ -32,6 +33,11 @@ select de in yes no; do
 		# Add shell-option to ~/.inputrc to enable case-insensitive tab completion
 		echo 'set completion-ignore-case On' >> ~/.inputrc
 
+		#putting icons in ranger
+                git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+                echo "default_linemode devicons" >> $HOME/.config/ranger/rc.conf
+		
+		#setting a random dark theme
 		wal --theme random_dark
 
 		break
@@ -53,7 +59,6 @@ ln -sfv $path/.xinitrc $HOME/.xinitrc
 ln -sfv $path/.Xresources $HOME/.Xresources
 ln -sfv $path/.bashrc $HOME/.bashrc
 ln -sfv $path/.nanorc $HOME/.nanorc
-sudo ln -sfv $path/tlp.conf /etc/tlp.conf 
 
 #Config directory
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
