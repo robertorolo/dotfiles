@@ -25,6 +25,7 @@ select de in yes no; do
 		#Installing Plug for vim
                 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' 
+
 		# If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
 		# so it won't get overriden
 		if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
@@ -117,7 +118,7 @@ ln -sfv $path/config/picom/picom.conf $HOME/.config/picom/picom.conf
 [ ! -d $HOME/.config/zathura ] && mkdir $HOME/.config/zathura
 ln -sfv $path/config/zathura/zathurarc $HOME/.config/zathura/zathurarc
 
-sudo chmod +x scripts/*
+sudo chmod +x $path/scripts/*
 
 xdg-mime default feh.desktop image/jpeg
 xdg-mime default feh.desktop image/png
