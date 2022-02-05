@@ -23,8 +23,7 @@ select de in yes no; do
 		yay -S ttf-roboto nerd-fonts-jetbrains-mono 
 	
 		#Installing Plug for vim
-		sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \t
-       		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+                sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 		# If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
 		# so it won't get overriden

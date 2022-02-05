@@ -24,6 +24,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import os
+import pwd
+
 from typing import List  # noqa: F401
 
 from libqtile import bar, layout, widget
@@ -31,9 +34,14 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
+def get_username():
+    return pwd.getpwuid( os.getuid() )[ 0 ]
+
+uname = get_username()
+
 # pywal
 colors = []
-cache='/home/stardust/.cache/wal/colors'
+cache='/home/{}/.cache/wal/colors'.format(uname)
 def load_colors(cache):
     with open(cache, 'r') as file:
         for i in range(8):
