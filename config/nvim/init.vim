@@ -83,6 +83,7 @@ Plug 'dylanaraps/wal.vim'
 Plug 'preservim/nerdtree' 
 Plug 'jiangmiao/auto-pairs'
 Plug 'google/vim-searchindex' 
+Plug 'ryanoasis/vim-devicons'
 
 "Initialize plugin system
 call plug#end()
