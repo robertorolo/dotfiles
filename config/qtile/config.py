@@ -171,7 +171,7 @@ screens = [
                     this_current_screen_border=colors[1],
                     ),
                 widget.WindowName(max_chars=60, format='{name}'),
-                widget.TextBox(text=" "),
+                widget.TextBox(text=" "),
                 widget.CryptoTicker(crypto='BTC', format='{crypto}:{amount:.2f} '),
                 widget.CryptoTicker(crypto='ETH', format='{crypto}:{amount:.2f}'),
                 widget.TextBox(text=" "),

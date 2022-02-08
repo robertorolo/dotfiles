@@ -98,30 +98,8 @@ extract () {
 	done
 }
 
-senha () {
-	
-	cat "$1" | grep -i $2
-
-}
-
 shopt -s cdspell
 shopt -s autocd
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/void/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/void/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/void/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/void/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
