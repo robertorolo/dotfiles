@@ -50,6 +50,9 @@ def load_colors(cache):
     lazy.reload()
 load_colors(cache)
 
+foreground = colors[7]
+background = colors[0]
+
 mod = "mod4"
 terminal = guess_terminal()
 
@@ -130,7 +133,7 @@ for i in groups:
     )
 
 layouts = [
-    layout.MonadTall(margin=5, border_width=2, border_focus=colors[1], border_normal=colors[0]),
+    layout.MonadTall(margin=5, border_width=2, border_focus=foreground, border_normal=background),
     #layout.Floating(border_width=2, border_focus=colors[1], border_normal=colors[0]),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
@@ -150,7 +153,7 @@ widget_defaults = dict(
     font="monospace",
     fontsize=12,
     padding=2,
-    foreground=colors[3],
+    foreground=foreground,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -160,15 +163,15 @@ screens = [
             [
                 #widget.CurrentLayoutIcon(custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")]),
                 #widget.CurrentLayout(),
-                widget.Prompt(font="monospace", cursor_color=colors[3]),
+                widget.Prompt(font="monospace", cursor_color=foreground),
                 widget.GroupBox(
                     rounded=False, 
                     hide_unused=True,
-                    inactive=colors[7], 
-                    active=colors[7],
+                    inactive=foreground, 
+                    active=foreground,
                     highlight_method="block", 
-                    urgent_border=colors[2],
-                    this_current_screen_border=colors[1],
+                    urgent_border=colors[1],
+                    this_current_screen_border=colors[4],
                     ),
                 widget.WindowName(max_chars=60, format='{name}'),
                 widget.TextBox(text=" "),
@@ -189,10 +192,11 @@ screens = [
                 widget.TextBox(text=" "),
                 widget.Wlan(interface="wlp3s0"),
                 widget.TextBox(text=" "),
-                widget.Clock(format="%Y/%m/%d %H:%M", foreground=colors[1]),
+                widget.Clock(format="%Y/%m/%d %H:%M", foreground=colors[5]),
             ],
             24,
-            background=colors[0],
+            background=background
+            ,
         ),
     ),
 ]
@@ -209,7 +213,7 @@ dgroups_app_rules = []  # type: List
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating(border_width=2, border_focus=colors[1], border_normal=colors[0],
+floating_layout = layout.Floating(border_width=2, border_focus=foreground, border_normal=background,
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,

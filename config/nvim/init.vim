@@ -84,6 +84,7 @@ Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'google/vim-searchindex' 
 Plug 'ryanoasis/vim-devicons'
+Plug 'chrisbra/Colorizer' 
 
 "Initialize plugin system
 call plug#end()
