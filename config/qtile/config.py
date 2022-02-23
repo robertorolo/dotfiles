@@ -65,7 +65,7 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
     #screenshot
-    Key([], "Print", lazy.spawn('scrot ss/telatiro-"$%y%m%d-%H%M-%S.png" && notify-send "Tela tiro!"')),
+    Key([], "Print", lazy.spawn('scrot ss/telatiro-"$%y%m%d-%H%M-%S.png"')),
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
@@ -171,7 +171,7 @@ screens = [
                     active=foreground,
                     highlight_method="block", 
                     urgent_border=colors[1],
-                    this_current_screen_border=colors[4],
+                    this_current_screen_border=colors[5],
                     ),
                 widget.WindowName(max_chars=60, format='{name}'),
                 widget.TextBox(text=" "),
@@ -180,7 +180,7 @@ screens = [
                 widget.TextBox(text=" "),
                 #widget.TextBox(text=""),
                 widget.TextBox(text=" "),
-                widget.Battery(format='{char} {percent:2.0%} {hour:d}:{min:02d}', low_foreground=colors[1], charge_char='', discharge_char='', full_char='f',show_short_text=False),
+                widget.Battery(format='{char} {percent:2.0%} ETA {hour:d}:{min:02d}', low_foreground=colors[1], charge_char='', discharge_char='', full_char='f',show_short_text=False),
                 widget.TextBox(text=" "),
                 widget.TextBox(text=" "),
                 widget.Backlight(),

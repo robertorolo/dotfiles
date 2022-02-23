@@ -53,6 +53,7 @@ alias clima='curl wttr.in/~Porto+Alegre'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
+alias c='colorscript -r'
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
     LESS_TERMCAP_me=$'\e[0m' \
