@@ -1,0 +1,18 @@
+#!/bin/python
+
+import sys
+import subprocess
+
+files = sys.argv[1:-1]
+outfl = sys.argv[-1]
+
+print('Stacking {} into {}'.format(files, outfl))
+
+files_str = ''
+
+for i in files:
+    files_str = files_str+i+' '
+
+c = 'convert {} -gravity center -append {}'.format(files_str, outfl)
+
+code = subprocess.call(c, shell=True)
