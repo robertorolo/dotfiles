@@ -181,7 +181,7 @@ screens = [
                 #widget.TextBox(text=""),
                 #widget.TextBox(text=" "),
                 #widget.Battery(format='{char} {percent:2.0%} ETA {hour:d}:{min:02d}', low_foreground=colors[1], charge_char='', discharge_char='', full_char='f',show_short_text=False),
-                widget.Battery(charge_char=' ', discharge_char=' ', full_char=' ', format='{char} {percent:2.0%} {hour:d}:{min:02d}', low_foreground=colors[1]),
+                widget.Battery(charge_char=' ', discharge_char=' ', full_char=' ', format='{char} {percent:2.0%} {hour:d}:{min:02d}', low_foreground=colors[1], show_short_text=False),
                 widget.TextBox(text=" "),
                 widget.TextBox(text=" "),
                 widget.Backlight(),
